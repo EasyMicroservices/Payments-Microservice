@@ -10,7 +10,7 @@ namespace EasyMicroservices.PaymentsMicroservice.Database.Schemas
 {
     public class InvoiceStatusHistorySchema : IUniqueIdentitySchema, ISoftDeleteSchema, IDateTimeSchema
     {
-        public StatusType status { get; set; }
+        public StatusType Status { get; set; }
         public string UniqueIdentity { get; set; }
         public bool IsDeleted { get; set; }
         public DateTime? DeletedDateTime { get; set; }

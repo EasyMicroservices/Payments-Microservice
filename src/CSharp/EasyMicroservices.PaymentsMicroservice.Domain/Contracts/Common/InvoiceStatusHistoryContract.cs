@@ -12,7 +12,7 @@ namespace EasyMicroservices.PaymentsMicroservice.Contracts.Common
     {
         public long InvoiceId { get; set; } 
         public long Id { get; set; }
-        public StatusType status { get; set; }
+        public StatusType Status { get; set; }
         public string UniqueIdentity { get; set; }
         public DateTime CreationDateTime { get; set; }
         public DateTime? ModificationDateTime { get; set; }

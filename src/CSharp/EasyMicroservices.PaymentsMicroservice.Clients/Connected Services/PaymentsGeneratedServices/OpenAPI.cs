@@ -6446,13 +6446,15 @@ namespace Payments.GeneratedServices
 
         Paied = 8,
 
-        Canceled = 81,
+        Canceled = 9,
 
-        Failed = 82,
+        Failed = 10,
 
-        Successful = 83,
+        Successful = 11,
 
-        Closed = 84,
+        Closed = 12,
+
+        PaidBack = 13,
 
     }
 

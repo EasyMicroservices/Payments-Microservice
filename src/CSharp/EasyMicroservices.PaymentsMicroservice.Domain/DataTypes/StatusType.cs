@@ -36,11 +36,11 @@ namespace EasyMicroservices.PaymentsMicroservice.DataTypes
             Created = 6,
             RedirectedToBankPortal = 7,
             Paied = 8,
-            Canceled = 81,
-            Failed = 82,
-            Successful = 83,
-            Closed = 84,
-            PaidBack = 84
+            Canceled = 9,
+            Failed = 10,
+            Successful = 11,
+            Closed = 12,
+            PaidBack = 13
 
     }
 }
