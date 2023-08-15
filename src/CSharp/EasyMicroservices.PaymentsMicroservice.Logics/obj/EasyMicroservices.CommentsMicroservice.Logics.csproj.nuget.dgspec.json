@@ -1,0 +1,215 @@
+{
+  "format": 1,
+  "restore": {
+    "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Logics\\EasyMicroservices.PaymentsMicroservice.Logics.csproj": {}
+  },
+  "projects": {
+    "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Database\\EasyMicroservices.PaymentsMicroservice.Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Database\\EasyMicroservices.PaymentsMicroservice.Database.csproj",
+        "projectName": "EasyMicroservices.PaymentsMicroservice.Database",
+        "projectPath": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Database\\EasyMicroservices.PaymentsMicroservice.Database.csproj",
+        "packagesPath": "C:\\Users\\amini\\.nuget\\packages\\",
+        "outputPath": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Database\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amini\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Domain\\EasyMicroservices.PaymentsMicroservice.Domain.csproj": {
+                "projectPath": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Domain\\EasyMicroservices.PaymentsMicroservice.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "EasyMicroservices.Configuration": {
+              "target": "Package",
+              "version": "[0.0.0.2, )"
+            },
+            "EasyMicroservices.Cores.Relational.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[0.0.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Domain\\EasyMicroservices.PaymentsMicroservice.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Domain\\EasyMicroservices.PaymentsMicroservice.Domain.csproj",
+        "projectName": "EasyMicroservices.PaymentsMicroservice.Domain",
+        "projectPath": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Domain\\EasyMicroservices.PaymentsMicroservice.Domain.csproj",
+        "packagesPath": "C:\\Users\\amini\\.nuget\\packages\\",
+        "outputPath": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amini\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "EasyMicroservices.Cores.Database": {
+              "target": "Package",
+              "version": "[0.0.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Logics\\EasyMicroservices.PaymentsMicroservice.Logics.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Logics\\EasyMicroservices.PaymentsMicroservice.Logics.csproj",
+        "projectName": "EasyMicroservices.PaymentsMicroservice.Logics",
+        "projectPath": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Logics\\EasyMicroservices.PaymentsMicroservice.Logics.csproj",
+        "packagesPath": "C:\\Users\\amini\\.nuget\\packages\\",
+        "outputPath": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Logics\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amini\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Database\\EasyMicroservices.PaymentsMicroservice.Database.csproj": {
+                "projectPath": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Database\\EasyMicroservices.PaymentsMicroservice.Database.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "EasyMicroservices.Mapper.CompileTimeMapper": {
+              "target": "Package",
+              "version": "[0.0.0.5, )"
+            },
+            "EasyMicroservices.Mapper.SerializerMapper": {
+              "target": "Package",
+              "version": "[0.0.0.2, )"
+            },
+            "EasyMicroservices.Serialization.Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[0.0.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
