@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>EasyMicroservices.PaymentsMicroservice</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EasyMicroservices.PaymentsMicroservice.Logics\EasyMicroservices.PaymentsMicroservice.Logics.csproj" />
+  </ItemGroup>
+
+</Project>
