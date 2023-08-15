@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = EasyMicroservices.Payments.Clients
+build_property.ProjectDir = I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\
