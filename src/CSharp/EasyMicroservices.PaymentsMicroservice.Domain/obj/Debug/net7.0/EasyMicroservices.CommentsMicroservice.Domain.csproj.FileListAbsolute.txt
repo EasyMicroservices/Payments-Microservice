@@ -1,0 +1,12 @@
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Domain\bin\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Domain.deps.json
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Domain\bin\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Domain.dll
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Domain\bin\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Domain.pdb
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Domain\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Domain.csproj.AssemblyReference.cache
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Domain\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Domain.GeneratedMSBuildEditorConfig.editorconfig
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Domain\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Domain.AssemblyInfoInputs.cache
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Domain\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Domain.AssemblyInfo.cs
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Domain\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Domain.csproj.CoreCompileInputs.cache
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Domain\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Domain.dll
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Domain\obj\Debug\net7.0\refint\EasyMicroservices.PaymentsMicroservice.Domain.dll
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Domain\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Domain.pdb
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Domain\obj\Debug\net7.0\ref\EasyMicroservices.PaymentsMicroservice.Domain.dll

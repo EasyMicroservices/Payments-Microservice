@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "gx2eXcjHCXmuXFbrgd2lXqHp7+xC4tuIFTkoer6zWTc=",
+  "Source": "EasyMicroservices.PaymentsMicroservice.WebApi",
+  "BasePath": "_content/EasyMicroservices.PaymentsMicroservice.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

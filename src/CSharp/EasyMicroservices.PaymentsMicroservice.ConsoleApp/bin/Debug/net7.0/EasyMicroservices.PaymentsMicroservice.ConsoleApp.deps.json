@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "EasyMicroservices.PaymentsMicroservice.ConsoleApp/1.0.0": {
+        "runtime": {
+          "EasyMicroservices.PaymentsMicroservice.ConsoleApp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EasyMicroservices.PaymentsMicroservice.ConsoleApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
