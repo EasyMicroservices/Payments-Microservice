@@ -1,0 +1,13 @@
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\bin\Debug\net6.0\EasyMicroservices.PaymentsMicroservice.Clients.xml
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\bin\Debug\net6.0\EasyMicroservices.Payments.Clients.deps.json
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\bin\Debug\net6.0\EasyMicroservices.Payments.Clients.dll
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\bin\Debug\net6.0\EasyMicroservices.Payments.Clients.pdb
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\obj\Debug\net6.0\EasyMicroservices.Payments.Clients.csproj.AssemblyReference.cache
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\obj\Debug\net6.0\EasyMicroservices.Payments.Clients.GeneratedMSBuildEditorConfig.editorconfig
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\obj\Debug\net6.0\EasyMicroservices.Payments.Clients.AssemblyInfoInputs.cache
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\obj\Debug\net6.0\EasyMicroservices.Payments.Clients.AssemblyInfo.cs
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\obj\Debug\net6.0\EasyMicroservices.Payments.Clients.csproj.CoreCompileInputs.cache
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\obj\Debug\net6.0\EasyMicroservices.Payments.Clients.dll
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\obj\Debug\net6.0\refint\EasyMicroservices.Payments.Clients.dll
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\obj\Debug\net6.0\EasyMicroservices.Payments.Clients.pdb
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\obj\Debug\net6.0\ref\EasyMicroservices.Payments.Clients.dll

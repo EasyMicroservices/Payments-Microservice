@@ -1,0 +1,123 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "EasyMicroservices.PaymentsMicroservice.Domain/1.0.0": {
+        "dependencies": {
+          "EasyMicroservices.Cores.Database": "0.0.0.15"
+        },
+        "runtime": {
+          "EasyMicroservices.PaymentsMicroservice.Domain.dll": {}
+        }
+      },
+      "EasyMicroservices.Cores.Contracts/0.0.0.3": {
+        "runtime": {
+          "lib/net6.0/EasyMicroservices.Cores.Contracts.dll": {
+            "assemblyVersion": "0.0.0.3",
+            "fileVersion": "0.0.0.3"
+          }
+        }
+      },
+      "EasyMicroservices.Cores.Database/0.0.0.15": {
+        "dependencies": {
+          "EasyMicroservices.Cores.Contracts": "0.0.0.3",
+          "EasyMicroservices.Database": "0.0.0.5",
+          "EasyMicroservices.Mapper": "0.0.0.4",
+          "EasyMicroservices.ServiceContracts": "0.0.0.6",
+          "EasyMicroservices.Utilities": "0.0.0.11"
+        },
+        "runtime": {
+          "lib/net6.0/EasyMicroservices.Cores.Database.dll": {
+            "assemblyVersion": "0.0.0.15",
+            "fileVersion": "0.0.0.15"
+          }
+        }
+      },
+      "EasyMicroservices.Database/0.0.0.5": {
+        "runtime": {
+          "lib/net6.0/EasyMicroservices.Database.dll": {
+            "assemblyVersion": "0.0.0.5",
+            "fileVersion": "0.0.0.5"
+          }
+        }
+      },
+      "EasyMicroservices.Mapper/0.0.0.4": {
+        "runtime": {
+          "lib/net6.0/EasyMicroservices.Mapper.dll": {
+            "assemblyVersion": "0.0.0.4",
+            "fileVersion": "0.0.0.4"
+          }
+        }
+      },
+      "EasyMicroservices.ServiceContracts/0.0.0.6": {
+        "runtime": {
+          "lib/net6.0/EasyMicroservices.ServiceContracts.dll": {
+            "assemblyVersion": "0.0.0.6",
+            "fileVersion": "0.0.0.6"
+          }
+        }
+      },
+      "EasyMicroservices.Utilities/0.0.0.11": {
+        "runtime": {
+          "lib/net7.0/EasyMicroservices.Utilities.dll": {
+            "assemblyVersion": "0.0.0.11",
+            "fileVersion": "0.0.0.11"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EasyMicroservices.PaymentsMicroservice.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EasyMicroservices.Cores.Contracts/0.0.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hLN7kPtKMcAL8olAF6lc4wSZ8bMqQfCAK0+y6d3PUjGdaZ+hC/ZXWjBDsolExT6X7kTgU/cF8GE9W+zp4jkCrg==",
+      "path": "easymicroservices.cores.contracts/0.0.0.3",
+      "hashPath": "easymicroservices.cores.contracts.0.0.0.3.nupkg.sha512"
+    },
+    "EasyMicroservices.Cores.Database/0.0.0.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UIex14G/YLX2YMHAn5TUt7LiAXez/moMFGIADf1wivUkxWqdx2/+x+/b5jZ+zL2ZUV7uJM0VdBi+IRSBX/sI1w==",
+      "path": "easymicroservices.cores.database/0.0.0.15",
+      "hashPath": "easymicroservices.cores.database.0.0.0.15.nupkg.sha512"
+    },
+    "EasyMicroservices.Database/0.0.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GsSrbJI0SY7CnZIIyC06AW7D1NjxQ53HCLHiuzgUHUUqWXyhdOUfC+bU3G/fL0UbzNhR7htiPwNTvmCCwZC9ng==",
+      "path": "easymicroservices.database/0.0.0.5",
+      "hashPath": "easymicroservices.database.0.0.0.5.nupkg.sha512"
+    },
+    "EasyMicroservices.Mapper/0.0.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8yiJ1a8AuIT0e8nbVhh5lASkEMya8Qn1ixy9gOexLC0N61n4iL709VDfqGrdzTjgwa8fzTk+WqaBzp86EtX5Gg==",
+      "path": "easymicroservices.mapper/0.0.0.4",
+      "hashPath": "easymicroservices.mapper.0.0.0.4.nupkg.sha512"
+    },
+    "EasyMicroservices.ServiceContracts/0.0.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-E56dh/TS1VSy+/47skJBAdFnY+QlvcyrpPuSZ6SAslk47RncvZHppwzjRwzJqfq8BZnZkTMATG/4EGszs+ZfDg==",
+      "path": "easymicroservices.servicecontracts/0.0.0.6",
+      "hashPath": "easymicroservices.servicecontracts.0.0.0.6.nupkg.sha512"
+    },
+    "EasyMicroservices.Utilities/0.0.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-75V4WDHOsAuw9Z3IfS+lfKbjfW+hKbX5hoOQEwehDEy09z2YA9fNcFKJW6O620EY1ECa1IfldXJSEPu7ZY+EqQ==",
+      "path": "easymicroservices.utilities/0.0.0.11",
+      "hashPath": "easymicroservices.utilities.0.0.0.11.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>EasyMicroservices.Payments.Clients</id>
+    <version>0.0.0.3</version>
+    <authors>EasyMicroservices</authors>
+    <projectUrl>https://github.com/EasyMicroservices/Payments-Microservice</projectUrl>
+    <description>client generated code.</description>
+    <copyright>EasyMicroservices@gmail.com</copyright>
+    <tags>microservice,Payment,Payments,client</tags>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\bin\Debug\net6.0\EasyMicroservices.Payments.Clients.dll" target="lib\net6.0\EasyMicroservices.Payments.Clients.dll" />
+    <file src="I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\bin\Debug\net6.0\EasyMicroservices.PaymentsMicroservice.Clients.xml" target="lib\net6.0\EasyMicroservices.PaymentsMicroservice.Clients.xml" />
+    <file src="I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\bin\Debug\netstandard2.0\EasyMicroservices.Payments.Clients.dll" target="lib\netstandard2.0\EasyMicroservices.Payments.Clients.dll" />
+    <file src="I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\bin\Debug\netstandard2.0\EasyMicroservices.PaymentsMicroservice.Clients.xml" target="lib\netstandard2.0\EasyMicroservices.PaymentsMicroservice.Clients.xml" />
+    <file src="I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\bin\Debug\netstandard2.1\EasyMicroservices.Payments.Clients.dll" target="lib\netstandard2.1\EasyMicroservices.Payments.Clients.dll" />
+    <file src="I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Clients\bin\Debug\netstandard2.1\EasyMicroservices.PaymentsMicroservice.Clients.xml" target="lib\netstandard2.1\EasyMicroservices.PaymentsMicroservice.Clients.xml" />
+  </files>
+</package>

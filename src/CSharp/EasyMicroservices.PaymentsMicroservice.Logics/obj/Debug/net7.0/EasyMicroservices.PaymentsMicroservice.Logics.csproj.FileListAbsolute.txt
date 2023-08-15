@@ -1,0 +1,17 @@
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\bin\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Logics.deps.json
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\bin\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Logics.dll
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\bin\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Logics.pdb
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\bin\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Database.dll
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\bin\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Domain.dll
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\bin\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Database.pdb
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\bin\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Domain.pdb
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Logics.csproj.AssemblyReference.cache
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Logics.GeneratedMSBuildEditorConfig.editorconfig
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Logics.AssemblyInfoInputs.cache
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Logics.AssemblyInfo.cs
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Logics.csproj.CoreCompileInputs.cache
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Logics.csproj.CopyComplete
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Logics.dll
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\obj\Debug\net7.0\refint\EasyMicroservices.PaymentsMicroservice.Logics.dll
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\obj\Debug\net7.0\EasyMicroservices.PaymentsMicroservice.Logics.pdb
+I:\CSharp_Project\Payments-Microservice\src\CSharp\EasyMicroservices.PaymentsMicroservice.Logics\obj\Debug\net7.0\ref\EasyMicroservices.PaymentsMicroservice.Logics.dll

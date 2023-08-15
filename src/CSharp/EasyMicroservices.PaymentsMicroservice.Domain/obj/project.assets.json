@@ -1,0 +1,279 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "EasyMicroservices.Cores.Contracts/0.0.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/EasyMicroservices.Cores.Contracts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/EasyMicroservices.Cores.Contracts.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "EasyMicroservices.Cores.Database/0.0.0.15": {
+        "type": "package",
+        "dependencies": {
+          "EasyMicroservices.Cores.Contracts": "0.0.0.3",
+          "EasyMicroservices.Database": "0.0.0.5",
+          "EasyMicroservices.Mapper": "0.0.0.4",
+          "EasyMicroservices.ServiceContracts": "0.0.0.6",
+          "EasyMicroservices.Utilities": "0.0.0.11"
+        },
+        "compile": {
+          "lib/net6.0/EasyMicroservices.Cores.Database.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/EasyMicroservices.Cores.Database.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "EasyMicroservices.Database/0.0.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/EasyMicroservices.Database.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/EasyMicroservices.Database.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "EasyMicroservices.Mapper/0.0.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/EasyMicroservices.Mapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/EasyMicroservices.Mapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "EasyMicroservices.ServiceContracts/0.0.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/EasyMicroservices.ServiceContracts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/EasyMicroservices.ServiceContracts.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "EasyMicroservices.Utilities/0.0.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/EasyMicroservices.Utilities.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/EasyMicroservices.Utilities.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EasyMicroservices.Cores.Contracts/0.0.0.3": {
+      "sha512": "hLN7kPtKMcAL8olAF6lc4wSZ8bMqQfCAK0+y6d3PUjGdaZ+hC/ZXWjBDsolExT6X7kTgU/cF8GE9W+zp4jkCrg==",
+      "type": "package",
+      "path": "easymicroservices.cores.contracts/0.0.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "easymicroservices.cores.contracts.0.0.0.3.nupkg.sha512",
+        "easymicroservices.cores.contracts.nuspec",
+        "lib/net45/EasyMicroservices.Cores.Contracts.dll",
+        "lib/net45/EasyMicroservices.Cores.Contracts.xml",
+        "lib/net6.0/EasyMicroservices.Cores.Contracts.dll",
+        "lib/net6.0/EasyMicroservices.Cores.Contracts.xml",
+        "lib/netstandard2.0/EasyMicroservices.Cores.Contracts.dll",
+        "lib/netstandard2.0/EasyMicroservices.Cores.Contracts.xml",
+        "lib/netstandard2.1/EasyMicroservices.Cores.Contracts.dll",
+        "lib/netstandard2.1/EasyMicroservices.Cores.Contracts.xml"
+      ]
+    },
+    "EasyMicroservices.Cores.Database/0.0.0.15": {
+      "sha512": "UIex14G/YLX2YMHAn5TUt7LiAXez/moMFGIADf1wivUkxWqdx2/+x+/b5jZ+zL2ZUV7uJM0VdBi+IRSBX/sI1w==",
+      "type": "package",
+      "path": "easymicroservices.cores.database/0.0.0.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "easymicroservices.cores.database.0.0.0.15.nupkg.sha512",
+        "easymicroservices.cores.database.nuspec",
+        "lib/net45/EasyMicroservices.Cores.Database.dll",
+        "lib/net45/EasyMicroservices.Cores.Database.xml",
+        "lib/net6.0/EasyMicroservices.Cores.Database.dll",
+        "lib/net6.0/EasyMicroservices.Cores.Database.xml",
+        "lib/netstandard2.0/EasyMicroservices.Cores.Database.dll",
+        "lib/netstandard2.0/EasyMicroservices.Cores.Database.xml",
+        "lib/netstandard2.1/EasyMicroservices.Cores.Database.dll",
+        "lib/netstandard2.1/EasyMicroservices.Cores.Database.xml"
+      ]
+    },
+    "EasyMicroservices.Database/0.0.0.5": {
+      "sha512": "GsSrbJI0SY7CnZIIyC06AW7D1NjxQ53HCLHiuzgUHUUqWXyhdOUfC+bU3G/fL0UbzNhR7htiPwNTvmCCwZC9ng==",
+      "type": "package",
+      "path": "easymicroservices.database/0.0.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "easymicroservices.database.0.0.0.5.nupkg.sha512",
+        "easymicroservices.database.nuspec",
+        "lib/net45/EasyMicroservices.Database.dll",
+        "lib/net45/EasyMicroservices.Database.xml",
+        "lib/net6.0/EasyMicroservices.Database.dll",
+        "lib/net6.0/EasyMicroservices.Database.xml",
+        "lib/netstandard2.0/EasyMicroservices.Database.dll",
+        "lib/netstandard2.0/EasyMicroservices.Database.xml",
+        "lib/netstandard2.1/EasyMicroservices.Database.dll",
+        "lib/netstandard2.1/EasyMicroservices.Database.xml"
+      ]
+    },
+    "EasyMicroservices.Mapper/0.0.0.4": {
+      "sha512": "8yiJ1a8AuIT0e8nbVhh5lASkEMya8Qn1ixy9gOexLC0N61n4iL709VDfqGrdzTjgwa8fzTk+WqaBzp86EtX5Gg==",
+      "type": "package",
+      "path": "easymicroservices.mapper/0.0.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "easymicroservices.mapper.0.0.0.4.nupkg.sha512",
+        "easymicroservices.mapper.nuspec",
+        "lib/net45/EasyMicroservices.Mapper.dll",
+        "lib/net45/EasyMicroservices.Mapper.xml",
+        "lib/net6.0/EasyMicroservices.Mapper.dll",
+        "lib/net6.0/EasyMicroservices.Mapper.xml",
+        "lib/netstandard2.0/EasyMicroservices.Mapper.dll",
+        "lib/netstandard2.0/EasyMicroservices.Mapper.xml",
+        "lib/netstandard2.1/EasyMicroservices.Mapper.dll",
+        "lib/netstandard2.1/EasyMicroservices.Mapper.xml"
+      ]
+    },
+    "EasyMicroservices.ServiceContracts/0.0.0.6": {
+      "sha512": "E56dh/TS1VSy+/47skJBAdFnY+QlvcyrpPuSZ6SAslk47RncvZHppwzjRwzJqfq8BZnZkTMATG/4EGszs+ZfDg==",
+      "type": "package",
+      "path": "easymicroservices.servicecontracts/0.0.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "easymicroservices.servicecontracts.0.0.0.6.nupkg.sha512",
+        "easymicroservices.servicecontracts.nuspec",
+        "lib/net45/EasyMicroservices.ServiceContracts.dll",
+        "lib/net45/EasyMicroservices.ServiceContracts.xml",
+        "lib/net6.0/EasyMicroservices.ServiceContracts.dll",
+        "lib/net6.0/EasyMicroservices.ServiceContracts.xml",
+        "lib/netstandard2.0/EasyMicroservices.ServiceContracts.dll",
+        "lib/netstandard2.0/EasyMicroservices.ServiceContracts.xml",
+        "lib/netstandard2.1/EasyMicroservices.ServiceContracts.dll",
+        "lib/netstandard2.1/EasyMicroservices.ServiceContracts.xml"
+      ]
+    },
+    "EasyMicroservices.Utilities/0.0.0.11": {
+      "sha512": "75V4WDHOsAuw9Z3IfS+lfKbjfW+hKbX5hoOQEwehDEy09z2YA9fNcFKJW6O620EY1ECa1IfldXJSEPu7ZY+EqQ==",
+      "type": "package",
+      "path": "easymicroservices.utilities/0.0.0.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "easymicroservices.utilities.0.0.0.11.nupkg.sha512",
+        "easymicroservices.utilities.nuspec",
+        "lib/net45/EasyMicroservices.Utilities.dll",
+        "lib/net45/EasyMicroservices.Utilities.xml",
+        "lib/net6.0/EasyMicroservices.Utilities.dll",
+        "lib/net6.0/EasyMicroservices.Utilities.xml",
+        "lib/net7.0/EasyMicroservices.Utilities.dll",
+        "lib/net7.0/EasyMicroservices.Utilities.xml",
+        "lib/netstandard2.0/EasyMicroservices.Utilities.dll",
+        "lib/netstandard2.0/EasyMicroservices.Utilities.xml",
+        "lib/netstandard2.1/EasyMicroservices.Utilities.dll",
+        "lib/netstandard2.1/EasyMicroservices.Utilities.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "EasyMicroservices.Cores.Database >= 0.0.0.15"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\amini\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Domain\\EasyMicroservices.PaymentsMicroservice.Domain.csproj",
+      "projectName": "EasyMicroservices.PaymentsMicroservice.Domain",
+      "projectPath": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Domain\\EasyMicroservices.PaymentsMicroservice.Domain.csproj",
+      "packagesPath": "C:\\Users\\amini\\.nuget\\packages\\",
+      "outputPath": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Domain\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\amini\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "dependencies": {
+          "EasyMicroservices.Cores.Database": {
+            "target": "Package",
+            "version": "[0.0.0.15, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

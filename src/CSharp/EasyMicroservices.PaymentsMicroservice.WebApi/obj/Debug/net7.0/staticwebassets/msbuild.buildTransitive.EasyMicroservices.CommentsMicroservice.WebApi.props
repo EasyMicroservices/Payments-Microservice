@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\EasyMicroservices.PaymentsMicroservice.WebApi.props" />
+</Project>

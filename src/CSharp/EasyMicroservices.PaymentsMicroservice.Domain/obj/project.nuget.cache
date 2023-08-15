@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "TWiGt4rOtsznpsSIHKPD0R0axrEcoL4auKnW+Zm9YMgefKe6ol6DYkJLhuLmW+3CtD0PFAUuu9gXvktg/qvBFg==",
+  "success": true,
+  "projectFilePath": "I:\\CSharp_Project\\Payments-Microservice\\src\\CSharp\\EasyMicroservices.PaymentsMicroservice.Domain\\EasyMicroservices.PaymentsMicroservice.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\amini\\.nuget\\packages\\easymicroservices.cores.contracts\\0.0.0.3\\easymicroservices.cores.contracts.0.0.0.3.nupkg.sha512",
+    "C:\\Users\\amini\\.nuget\\packages\\easymicroservices.cores.database\\0.0.0.15\\easymicroservices.cores.database.0.0.0.15.nupkg.sha512",
+    "C:\\Users\\amini\\.nuget\\packages\\easymicroservices.database\\0.0.0.5\\easymicroservices.database.0.0.0.5.nupkg.sha512",
+    "C:\\Users\\amini\\.nuget\\packages\\easymicroservices.mapper\\0.0.0.4\\easymicroservices.mapper.0.0.0.4.nupkg.sha512",
+    "C:\\Users\\amini\\.nuget\\packages\\easymicroservices.servicecontracts\\0.0.0.6\\easymicroservices.servicecontracts.0.0.0.6.nupkg.sha512",
+    "C:\\Users\\amini\\.nuget\\packages\\easymicroservices.utilities\\0.0.0.11\\easymicroservices.utilities.0.0.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}
