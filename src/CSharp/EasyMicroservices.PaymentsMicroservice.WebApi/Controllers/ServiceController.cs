@@ -1,5 +1,6 @@
 ﻿using EasyMicroservices.AuthenticationsMicroservice.Database.Entities;
 using EasyMicroservices.Cores.AspCoreApi;
+using EasyMicroservices.Cores.AspEntityFrameworkCoreApi.Interfaces;
 using EasyMicroservices.Cores.Database.Interfaces;
 using EasyMicroservices.PaymentsMicroservice.Contracts.Common;
 using EasyMicroservices.PaymentsMicroservice.Contracts.Requests;
@@ -7,11 +8,12 @@ using EasyMicroservices.PaymentsMicroservice.Database.Entities;
 
 namespace EasyMicroservices.PaymentsMicroservice.WebApi.Controllers
 {
-    public class ServiceController : SimpleQueryServiceController<ServiceEntity, ServiceCreateRequestContract, ServiceUpdateRequestContract, ServiceContract, long>
+    public class ServiceController : SimpleQueryServiceController<ServiceEntity, CreateServiceRequestContract, UpdateServiceRequestContract, ServiceContract, long>
     {
-        public ServiceController(IContractLogic<ServiceEntity, ServiceCreateRequestContract, ServiceUpdateRequestContract, ServiceContract, long> contractReadable) : base(contractReadable)
+        private readonly IUnitOfWork _unitOfWork;
+        public ServiceController(IUnitOfWork unitOfWork) : base(null)
         {
-
+            _unitOfWork = unitOfWork;
         }
     }
 }

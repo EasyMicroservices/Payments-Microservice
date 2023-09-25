@@ -1,20 +1,12 @@
-﻿using EasyMicroservices.Cores.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EasyMicroservices.Cores.Database.Schemas;
+using EasyMicroservices.Domain.DataTypes;
 
 namespace EasyMicroservices.PaymentsMicroservice.Database.Schemas
 {
-    public class ProductSchema : IUniqueIdentitySchema, ISoftDeleteSchema, IDateTimeSchema
+    public class ProductSchema : FullAbilitySchema
     {
         public string Name { get; set; }
         public decimal Amount { get; set; }
-        public string UniqueIdentity { get; set; }
-        public bool IsDeleted { get; set; }
-        public DateTime? DeletedDateTime { get; set; }
-        public DateTime CreationDateTime { get; set; }
-        public DateTime? ModificationDateTime { get; set; }
+        public CurrencyCodeType CurrencyCode { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EasyMicroservices.PaymentsMicroservice.Contracts.Requests
 {
-    public class ServiceAddressCreateRequestContract
+    public class CreateServiceAddressRequestContract
     {
         public long ServiceId { get; set; }
         public string Address { get; set; }
