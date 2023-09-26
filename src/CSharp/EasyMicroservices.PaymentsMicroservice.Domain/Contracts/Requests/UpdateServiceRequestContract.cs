@@ -1,5 +1,4 @@
-﻿using EasyMicroservices.PaymentsMicroservice.DataTypes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace EasyMicroservices.PaymentsMicroservice.Contracts.Requests
 {
-    public class InvoiceStatusHistoryCreateRequestContract
+    public class UpdateServiceRequestContract
     {
-        public long InvoiceId { get; set; }
-        public StatusType Status { get; set; }
+        public long Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
         public string UniqueIdentity { get; set; }
-
     }
 }

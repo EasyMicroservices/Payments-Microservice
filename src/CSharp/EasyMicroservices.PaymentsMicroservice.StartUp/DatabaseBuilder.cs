@@ -1,15 +1,10 @@
-﻿using EasyMicroservices.PaymentsMicroservice.Database;
+﻿using EasyMicroservices.Cores.Relational.EntityFrameworkCore.Intrerfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EasyMicroservices.PaymentsMicroservice
 {
-    public class DatabaseBuilder : IDatabaseBuilder
+    public class DatabaseBuilder : IEntityFrameworkCoreDatabaseBuilder
     {
         readonly IConfiguration config = new ConfigurationBuilder()
         .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)

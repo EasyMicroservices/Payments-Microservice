@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace EasyMicroservices.PaymentsMicroservice.Contracts.Requests
 {
-    public class ProudctUpdateRequestContract
+    public class CreateProudctRequestContract
     {
-        public long Id { get; set; }
         public long InvoiceId { get; set; }
         public string Name { get; set; }
         public decimal Amount { get; set; }

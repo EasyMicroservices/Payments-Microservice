@@ -2,8 +2,8 @@
 
 namespace EasyMicroservices.PaymentsMicroservice.Database.Schemas
 {
-    public class ServiceAddressSchema : FullAbilitySchema
+    public class InvoiceUrlSchema : FullAbilitySchema
     {
-        public string Address { get; set; }
+        public string Url { get; set; }
     }
 }
