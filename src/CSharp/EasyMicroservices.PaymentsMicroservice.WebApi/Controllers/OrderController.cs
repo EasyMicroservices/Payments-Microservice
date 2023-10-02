@@ -12,10 +12,10 @@ using System.Threading;
 
 namespace EasyMicroservices.PaymentsMicroservice.WebApi.Controllers
 {
-    public class InvoiceController : SimpleQueryServiceController<InvoiceEntity, CreateInvoiceRequestContract, UpdateInvoiceRequestContract, InvoiceContract, long>
+    public class OrderController : SimpleQueryServiceController<OrderEntity, CreateOrderRequestContract, UpdateOrderRequestContract, OrderContract, long>
     {
         private readonly IUnitOfWork _unitOfWork;
-        public InvoiceController(IUnitOfWork unitOfWork) : base(null)
+        public OrderController(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }

@@ -11,7 +11,7 @@ namespace EasyMicroservices.PaymentsMicroservice.WebApi.Controllers
     public class ServiceController : SimpleQueryServiceController<ServiceEntity, CreateServiceRequestContract, UpdateServiceRequestContract, ServiceContract, long>
     {
         private readonly IUnitOfWork _unitOfWork;
-        public ServiceController(IUnitOfWork unitOfWork) : base(null)
+        public ServiceController(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }

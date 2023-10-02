@@ -10,9 +10,9 @@ namespace EasyMicroservices.PaymentsMicroservice.Contracts.Common
     public class ProductContract : IUniqueIdentitySchema, ISoftDeleteSchema, IDateTimeSchema
     {
         public long Id { get; set; }
-        public long InvoiceId { get; set; }
+        public long OrderId { get; set; }
         public string Name { get; set; }
-        public decimal Amount { get; set; }
+        public decimal TotalAmount { get; set; }
         public string UniqueIdentity { get; set; }
         public DateTime CreationDateTime { get; set; }
         public DateTime? ModificationDateTime { get; set; }

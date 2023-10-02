@@ -11,10 +11,10 @@ using EasyMicroservices.ServiceContracts;
 
 namespace EasyMicroservices.PaymentsMicroservice.WebApi.Controllers
 {
-    public class InvoiceStatusHistoryController : SimpleQueryServiceController<InvoiceStatusHistoryEntity, CreateInvoiceStatusHistoryRequestContract, UpdateInvoiceStatusHistoryRequestContract, InvoiceStatusHistoryContract, long>
+    public class OrderStatusHistoryController : SimpleQueryServiceController<OrderStatusHistoryEntity, CreateOrderStatusHistoryRequestContract, UpdateOrderStatusHistoryRequestContract, OrderStatusHistoryContract, long>
     {
         private readonly IUnitOfWork _unitOfWork;
-        public InvoiceStatusHistoryController(IUnitOfWork unitOfWork) : base(null)
+        public OrderStatusHistoryController(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }

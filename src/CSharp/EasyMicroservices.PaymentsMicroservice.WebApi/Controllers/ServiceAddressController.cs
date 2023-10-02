@@ -9,7 +9,7 @@ namespace EasyMicroservices.PaymentsMicroservice.WebApi.Controllers
     public class ServiceAddressController : SimpleQueryServiceController<ServiceAddressEntity, CreateServiceAddressRequestContract, UpdateServiceAddressRequestContract, ServiceAddressContract, long>
     {
         private readonly IUnitOfWork _unitOfWork;
-        public ServiceAddressController(IUnitOfWork unitOfWork) : base(null)
+        public ServiceAddressController(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }

@@ -12,11 +12,11 @@
 //        {
 //            _mapper = mapper;
 //        }
-//        public global::EasyMicroservices.PaymentsMicroservice.Database.Entities.InvoiceEntity Map(global::EasyMicroservices.PaymentsMicroservice.Contracts.Common.InvoiceContract fromObject, string uniqueRecordId, string language, object[] parameters)
+//        public global::EasyMicroservices.PaymentsMicroservice.Database.Entities.OrderEntity Map(global::EasyMicroservices.PaymentsMicroservice.Contracts.Common.OrderContract fromObject, string uniqueRecordId, string language, object[] parameters)
 //        {
 //            if (fromObject == default)
 //                return default;
-//            var mapped = new global::EasyMicroservices.PaymentsMicroservice.Database.Entities.InvoiceEntity()
+//            var mapped = new global::EasyMicroservices.PaymentsMicroservice.Database.Entities.OrderEntity()
 //            {
 //                Id = fromObject.Id,
 //                ServiceId = fromObject.ServiceId,
@@ -32,11 +32,11 @@
 //            };
 //            return mapped;
 //        }
-//        public global::EasyMicroservices.PaymentsMicroservice.Contracts.Common.InvoiceContract Map(global::EasyMicroservices.PaymentsMicroservice.Database.Entities.InvoiceEntity fromObject, string uniqueRecordId, string language, object[] parameters)
+//        public global::EasyMicroservices.PaymentsMicroservice.Contracts.Common.OrderContract Map(global::EasyMicroservices.PaymentsMicroservice.Database.Entities.OrderEntity fromObject, string uniqueRecordId, string language, object[] parameters)
 //        {
 //            if (fromObject == default)
 //                return default;
-//            var mapped = new global::EasyMicroservices.PaymentsMicroservice.Contracts.Common.InvoiceContract()
+//            var mapped = new global::EasyMicroservices.PaymentsMicroservice.Contracts.Common.OrderContract()
 //            {
 //                Id = fromObject.Id,
 //                ServiceId = fromObject.ServiceId,
@@ -52,11 +52,11 @@
 //            };
 //            return mapped;
 //        }
-//        public async Task<global::EasyMicroservices.PaymentsMicroservice.Database.Entities.InvoiceEntity> MapAsync(global::EasyMicroservices.PaymentsMicroservice.Contracts.Common.InvoiceContract fromObject, string uniqueRecordId, string language, object[] parameters)
+//        public async Task<global::EasyMicroservices.PaymentsMicroservice.Database.Entities.OrderEntity> MapAsync(global::EasyMicroservices.PaymentsMicroservice.Contracts.Common.OrderContract fromObject, string uniqueRecordId, string language, object[] parameters)
 //        {
 //            if (fromObject == default)
 //                return default;
-//            var mapped = new global::EasyMicroservices.PaymentsMicroservice.Database.Entities.InvoiceEntity()
+//            var mapped = new global::EasyMicroservices.PaymentsMicroservice.Database.Entities.OrderEntity()
 //            {
 //                Id = fromObject.Id,
 //                ServiceId = fromObject.ServiceId,
@@ -72,11 +72,11 @@
 //            };
 //            return mapped;
 //        }
-//        public async Task<global::EasyMicroservices.PaymentsMicroservice.Contracts.Common.InvoiceContract> MapAsync(global::EasyMicroservices.PaymentsMicroservice.Database.Entities.InvoiceEntity fromObject, string uniqueRecordId, string language, object[] parameters)
+//        public async Task<global::EasyMicroservices.PaymentsMicroservice.Contracts.Common.OrderContract> MapAsync(global::EasyMicroservices.PaymentsMicroservice.Database.Entities.OrderEntity fromObject, string uniqueRecordId, string language, object[] parameters)
 //        {
 //            if (fromObject == default)
 //                return default;
-//            var mapped = new global::EasyMicroservices.PaymentsMicroservice.Contracts.Common.InvoiceContract()
+//            var mapped = new global::EasyMicroservices.PaymentsMicroservice.Contracts.Common.OrderContract()
 //            {
 //                Id = fromObject.Id,
 //                ServiceId = fromObject.ServiceId,
@@ -97,17 +97,17 @@
 //        {
 //            if (fromObject == default)
 //                return default;
-//            if (fromObject.GetType() == typeof(EasyMicroservices.PaymentsMicroservice.Database.Entities.InvoiceEntity))
-//                return Map((EasyMicroservices.PaymentsMicroservice.Database.Entities.InvoiceEntity)fromObject, uniqueRecordId, language, parameters);
-//            return Map((EasyMicroservices.PaymentsMicroservice.Contracts.Common.InvoiceContract)fromObject, uniqueRecordId, language, parameters);
+//            if (fromObject.GetType() == typeof(EasyMicroservices.PaymentsMicroservice.Database.Entities.OrderEntity))
+//                return Map((EasyMicroservices.PaymentsMicroservice.Database.Entities.OrderEntity)fromObject, uniqueRecordId, language, parameters);
+//            return Map((EasyMicroservices.PaymentsMicroservice.Contracts.Common.OrderContract)fromObject, uniqueRecordId, language, parameters);
 //        }
 //        public async Task<object> MapObjectAsync(object fromObject, string uniqueRecordId, string language, object[] parameters)
 //        {
 //            if (fromObject == default)
 //                return default;
-//            if (fromObject.GetType() == typeof(EasyMicroservices.PaymentsMicroservice.Database.Entities.InvoiceEntity))
-//                return await MapAsync((EasyMicroservices.PaymentsMicroservice.Database.Entities.InvoiceEntity)fromObject, uniqueRecordId, language, parameters);
-//            return await MapAsync((EasyMicroservices.PaymentsMicroservice.Contracts.Common.InvoiceContract)fromObject, uniqueRecordId, language, parameters);
+//            if (fromObject.GetType() == typeof(EasyMicroservices.PaymentsMicroservice.Database.Entities.OrderEntity))
+//                return await MapAsync((EasyMicroservices.PaymentsMicroservice.Database.Entities.OrderEntity)fromObject, uniqueRecordId, language, parameters);
+//            return await MapAsync((EasyMicroservices.PaymentsMicroservice.Contracts.Common.OrderContract)fromObject, uniqueRecordId, language, parameters);
 //        }
 //    }
 //}

@@ -9,7 +9,7 @@ namespace EasyMicroservices.PaymentsMicroservice.WebApi.Controllers
     public class ProductController : SimpleQueryServiceController<ProductEntity, CreateProudctRequestContract, UpdateProudctRequestContract, ProductContract, long>
     {
         private readonly IUnitOfWork _unitOfWork;
-        public ProductController(IUnitOfWork unitOfWork) : base(null)
+        public ProductController(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }

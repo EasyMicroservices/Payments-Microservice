@@ -1,6 +1,6 @@
 ﻿namespace EasyMicroservices.PaymentsMicroservice.DataTypes
 {
-    public enum InvoiceStatusType : byte
+    public enum OrderStatusType : byte
     {
         /// <summary>
         /// value is none, Never use the None to return values

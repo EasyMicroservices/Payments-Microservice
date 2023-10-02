@@ -4,8 +4,8 @@ using System;
 
 namespace EasyMicroservices.PaymentsMicroservice.Database.Schemas
 {
-    public class InvoiceStatusHistorySchema : FullAbilitySchema
+    public class OrderStatusHistorySchema : FullAbilitySchema
     {
-        public InvoiceStatusType Status { get; set; }
+        public OrderStatusType Status { get; set; }
     }
 }

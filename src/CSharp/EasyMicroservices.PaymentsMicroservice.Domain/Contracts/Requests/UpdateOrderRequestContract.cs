@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 
 namespace EasyMicroservices.PaymentsMicroservice.Contracts.Requests
 {
-    public class CreateInvoiceStatusHistoryRequestContract
+    public class UpdateOrderRequestContract
     {
-        public long InvoiceId { get; set; }
-        public InvoiceStatusType Status { get; set; }
+        public long Id { get; set; }
+        public long ServiceId { get; set; }
+        public string Address { get; set; }
+        public OrderStatusType Status { get; set; }
+        public decimal TotalAmount { get; set; }
+        public string Url { get; set; }
         public string UniqueIdentity { get; set; }
-
     }
 }

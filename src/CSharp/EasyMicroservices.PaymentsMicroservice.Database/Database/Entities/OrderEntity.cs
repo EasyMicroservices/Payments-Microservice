@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace EasyMicroservices.PaymentsMicroservice.Database.Entities
 {
-    public class InvoiceEntity : InvoiceSchema, IIdSchema<long>
+    public class OrderEntity : OrderSchema, IIdSchema<long>
     {
         public long Id { get; set; }
 
@@ -13,8 +13,8 @@ namespace EasyMicroservices.PaymentsMicroservice.Database.Entities
         public ServiceEntity Service { get; set; }
 
         public ICollection<ProductEntity> Products { get; set; }
-        public ICollection<InvoiceStatusHistoryEntity> InvoiceStatusHistories { get; set; }
-        public ICollection<InvoiceUrlEntity> InvoiceUrls { get; set; }
+        public ICollection<OrderStatusHistoryEntity> OrderStatusHistories { get; set; }
+        public ICollection<OrderUrlEntity> OrderUrls { get; set; }
     }
     
 }

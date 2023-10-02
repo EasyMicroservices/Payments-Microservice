@@ -20,14 +20,9 @@ namespace EasyMicroservices.PaymentsMicroservice.WebApi
             var app = StartUpExtensions.Create<PaymentContext>(args);
             app.Services.Builder<PaymentContext>();
             app.Services.AddScoped((serviceProvider) => new UnitOfWork(serviceProvider));
-            app.Services.AddScoped((serviceProvider) => serviceProvider.GetService<IUnitOfWork>().GetLongContractLogic<InvoiceEntity, CreateInvoiceRequestContract, UpdateInvoiceRequestContract, InvoiceContract>());
-            app.Services.AddScoped((serviceProvider) => serviceProvider.GetService<IUnitOfWork>().GetLongContractLogic<InvoiceStatusHistoryEntity, CreateInvoiceStatusHistoryRequestContract, UpdateInvoiceStatusHistoryRequestContract, InvoiceStatusHistoryContract>());
-            app.Services.AddScoped((serviceProvider) => serviceProvider.GetService<IUnitOfWork>().GetLongContractLogic<ProductEntity, CreateProudctRequestContract, UpdateProudctRequestContract, ProductContract>());
-            app.Services.AddScoped((serviceProvider) => serviceProvider.GetService<IUnitOfWork>().GetLongContractLogic<ServiceAddressEntity, CreateServiceAddressRequestContract, UpdateServiceAddressRequestContract, ServiceAddressContract>());
-            app.Services.AddScoped((serviceProvider) => serviceProvider.GetService<IUnitOfWork>().GetLongContractLogic<ServiceEntity, CreateServiceRequestContract, UpdateServiceRequestContract, ServiceContract>());
             app.Services.AddTransient(serviceProvider => new PaymentContext(serviceProvider.GetService<IEntityFrameworkCoreDatabaseBuilder>()));
             app.Services.AddScoped<IEntityFrameworkCoreDatabaseBuilder>(serviceProvider => new DatabaseBuilder());
-            StartUpExtensions.AddWhiteLabel("Ordering", "RootAddresses:WhiteLabel");
+            StartUpExtensions.AddWhiteLabel("Payments", "RootAddresses:WhiteLabel");
 
             var build = await app.Build<PaymentContext>();
             build.MapControllers();

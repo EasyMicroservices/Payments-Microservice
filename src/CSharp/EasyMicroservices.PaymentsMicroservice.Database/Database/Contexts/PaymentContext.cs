@@ -8,25 +8,18 @@ namespace EasyMicroservices.PaymentsMicroservice.Database.Contexts
 {
     public class PaymentContext : RelationalCoreContext
     {
-        readonly IEntityFrameworkCoreDatabaseBuilder _builder;
-        public PaymentContext(IEntityFrameworkCoreDatabaseBuilder builder)
+        public PaymentContext(IEntityFrameworkCoreDatabaseBuilder builder) : base(builder)
         {
-            _builder = builder;
+
         }
 
-        public DbSet<InvoiceEntity> Invoices { get; set; }
-        public DbSet<InvoiceUrlEntity> InvoiceUrls { get; set; }
-        public DbSet<InvoiceStatusHistoryEntity> InvoiceStatusHistories { get; set; }
+        public DbSet<OrderEntity> Orders { get; set; }
+        public DbSet<OrderUrlEntity> OrderUrls { get; set; }
+        public DbSet<OrderStatusHistoryEntity> OrderStatusHistories { get; set; }
         public DbSet<ProductEntity> Products { get; set; }
         public DbSet<ServiceAddressEntity> ServiceAddresses { get; set; }
         public DbSet<ServiceEntity> Services { get; set; }
         
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            _builder?.OnConfiguring(optionsBuilder);
-            base.OnConfiguring(optionsBuilder);
-        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

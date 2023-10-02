@@ -9,6 +9,6 @@ namespace EasyMicroservices.PaymentsMicroservice.Database.Entities
         public long Id { get; set; }
 
         public ICollection<ServiceAddressEntity> ServiceAddresses { get; set; }
-        public ICollection<InvoiceEntity> Invoices { get; set; }
+        public ICollection<OrderEntity> Orders { get; set; }
     }
 }
