@@ -19,7 +19,7 @@ namespace EasyMicroservices.PaymentsMicroservice.Database.Contexts
         public DbSet<ProductEntity> Products { get; set; }
         public DbSet<ServiceAddressEntity> ServiceAddresses { get; set; }
         public DbSet<ServiceEntity> Services { get; set; }
-        
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

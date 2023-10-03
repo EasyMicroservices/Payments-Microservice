@@ -26,7 +26,7 @@ namespace EasyMicroservices.PaymentsMicroservice.WebApi.Controllers
             var orderContractLogic = _unitOfWork.GetLongContractLogic<OrderEntity, CreateOrderRequestContract, UpdateOrderRequestContract, OrderContract>();
             var orderLogic = _unitOfWork.GetLogic<OrderEntity, long>();
             var addedOrderId = await orderContractLogic.Add(request, cancellationToken).AsCheckedResult();
-            await OrderLogic.AddAndUpdateOrderStatus(addedOrderId, Payments.DataTypes.PaymentStatusType.Created , _unitOfWork);
+            await OrderLogic.AddAndUpdateOrderStatus(addedOrderId, Payments.DataTypes.PaymentStatusType.Created, _unitOfWork);
             var paymentOrderResponse = await OrderLogic.CreateOrder(request, _unitOfWork);
             var getOrder = await orderLogic.GetById(addedOrderId, cancellationToken).AsCheckedResult();
             var queryable = _unitOfWork.GetQueryableOf<OrderUrlEntity>();
@@ -53,7 +53,7 @@ namespace EasyMicroservices.PaymentsMicroservice.WebApi.Controllers
         public async Task<MessageContract> OpenPortal(string portalKey, CancellationToken cancellationToken = default)
         {
             var url = await _unitOfWork.GetLogic<OrderUrlEntity, long>().GetBy(x => x.Key == portalKey, cancellationToken: cancellationToken).AsCheckedResult();
-            await OrderLogic.AddAndUpdateOrderStatus(url.OrderId, Payments.DataTypes.PaymentStatusType.RedirectedToBankPortal , _unitOfWork);
+            await OrderLogic.AddAndUpdateOrderStatus(url.OrderId, Payments.DataTypes.PaymentStatusType.RedirectedToBankPortal, _unitOfWork);
             HttpContext.Response.StatusCode = StatusCodes.Status301MovedPermanently;
             HttpContext.Response.Headers.Location = url.Url;
             return true;
