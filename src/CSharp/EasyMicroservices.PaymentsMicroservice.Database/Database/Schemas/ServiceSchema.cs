@@ -1,5 +1,5 @@
 ﻿using EasyMicroservices.Cores.Database.Schemas;
-using EasyMicroservices.PaymentsMicroservice.DataTypes;
+using EasyMicroservices.Payments.DataTypes;
 
 namespace EasyMicroservices.PaymentsMicroservice.Database.Schemas
 {

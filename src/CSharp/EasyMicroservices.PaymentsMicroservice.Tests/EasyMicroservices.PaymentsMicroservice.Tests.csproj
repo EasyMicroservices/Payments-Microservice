@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
 
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
@@ -11,6 +10,8 @@
 
   <ItemGroup>
     <PackageReference Include="EasyMicroservices.Laboratory" Version="0.0.0.11" />
+    <PackageReference Include="EasyMicroservices.Payments.VirtualServerForTests" Version="0.0.0.4" />
+    <PackageReference Include="EasyMicroservices.PaymentsMicroservice.Clients" Version="0.0.0.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
     <PackageReference Include="xunit" Version="2.5.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.0">

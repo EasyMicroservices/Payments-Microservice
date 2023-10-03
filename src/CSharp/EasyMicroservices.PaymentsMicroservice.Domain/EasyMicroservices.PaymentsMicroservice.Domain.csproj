@@ -7,10 +7,11 @@
 
   <ItemGroup>
     <Folder Include="Contracts\Requests\Filters\" />
+    <Folder Include="DataTypes\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="EasyMicroservices.Payments.Stripe" Version="0.0.0.1" />
+    <PackageReference Include="EasyMicroservices.Payments.Stripe" Version="0.0.0.4" />
     <PackageReference Include="EasyMicroservices.Cores.AspEntityFrameworkCoreApi" Version="0.0.0.18" />
     <PackageReference Include="EasyMicroservices.Domain" Version="0.0.0.1" />
   </ItemGroup>

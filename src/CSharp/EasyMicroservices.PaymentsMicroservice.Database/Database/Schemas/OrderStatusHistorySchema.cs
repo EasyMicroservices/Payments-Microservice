@@ -1,11 +1,10 @@
 ﻿using EasyMicroservices.Cores.Database.Schemas;
-using EasyMicroservices.PaymentsMicroservice.DataTypes;
-using System;
+using EasyMicroservices.Payments.DataTypes;
 
 namespace EasyMicroservices.PaymentsMicroservice.Database.Schemas
 {
     public class OrderStatusHistorySchema : FullAbilitySchema
     {
-        public OrderStatusType Status { get; set; }
+        public PaymentStatusType Status { get; set; }
     }
 }

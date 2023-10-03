@@ -1,6 +1,5 @@
 ﻿using EasyMicroservices.Domain.DataTypes;
 using EasyMicroservices.PaymentsMicroservice.Contracts.Common;
-using EasyMicroservices.PaymentsMicroservice.DataTypes;
 using System.Collections.Generic;
 
 namespace EasyMicroservices.PaymentsMicroservice.Contracts.Requests

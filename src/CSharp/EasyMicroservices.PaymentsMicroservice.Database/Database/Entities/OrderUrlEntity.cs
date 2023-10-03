@@ -1,8 +1,9 @@
-﻿using EasyMicroservices.PaymentsMicroservice.Database.Schemas;
+﻿using EasyMicroservices.Cores.Interfaces;
+using EasyMicroservices.PaymentsMicroservice.Database.Schemas;
 
 namespace EasyMicroservices.PaymentsMicroservice.Database.Entities
 {
-    public class OrderUrlEntity : OrderUrlSchema
+    public class OrderUrlEntity : OrderUrlSchema, IIdSchema<long>
     {
         public long Id { get; set; }
 
