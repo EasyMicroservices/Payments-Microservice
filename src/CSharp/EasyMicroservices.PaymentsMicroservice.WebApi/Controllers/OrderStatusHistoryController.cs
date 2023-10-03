@@ -1,4 +1,5 @@
-﻿using EasyMicroservices.Cores.AspCoreApi;
+﻿using EasyMicroservices.AuthenticationsMicroservice.Database.Entities;
+using EasyMicroservices.Cores.AspCoreApi;
 using EasyMicroservices.Cores.AspEntityFrameworkCoreApi.Interfaces;
 using EasyMicroservices.Cores.Contracts.Requests;
 using EasyMicroservices.Cores.Database.Interfaces;
@@ -7,15 +8,13 @@ using EasyMicroservices.PaymentsMicroservice.Contracts.Requests;
 using EasyMicroservices.PaymentsMicroservice.Database.Contexts;
 using EasyMicroservices.PaymentsMicroservice.Database.Entities;
 using EasyMicroservices.ServiceContracts;
-using Microsoft.Identity.Client;
-using System.Threading;
 
 namespace EasyMicroservices.PaymentsMicroservice.WebApi.Controllers
 {
-    public class InvoiceController : SimpleQueryServiceController<InvoiceEntity, CreateInvoiceRequestContract, UpdateInvoiceRequestContract, InvoiceContract, long>
+    public class OrderStatusHistoryController : SimpleQueryServiceController<OrderStatusHistoryEntity, CreateOrderStatusHistoryRequestContract, UpdateOrderStatusHistoryRequestContract, OrderStatusHistoryContract, long>
     {
         private readonly IUnitOfWork _unitOfWork;
-        public InvoiceController(IUnitOfWork unitOfWork) : base(null)
+        public OrderStatusHistoryController(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }

@@ -6,14 +6,16 @@ namespace EasyMicroservices.PaymentsMicroservice
 {
     public class DatabaseBuilder : IEntityFrameworkCoreDatabaseBuilder
     {
-        readonly IConfiguration config = new ConfigurationBuilder()
-        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-        .Build();
+        readonly IConfiguration _config;
+        public DatabaseBuilder(IConfiguration config)
+        {
+            _config = config;
+        }
 
         public void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseInMemoryDatabase("PaymentDatabase");
-            //optionsBuilder.UseSqlServer(config.GetConnectionString("local"));
+            //optionsBuilder.UseSqlServer(_config.GetConnectionString("local"));
         }
     }
 }

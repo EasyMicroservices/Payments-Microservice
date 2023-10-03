@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace EasyMicroservices.PaymentsMicroservice.Database.Entities
 {
-    public class ServiceEntity : PaymentSchema, IIdSchema<long>
+    public class ServiceEntity : ServiceSchema, IIdSchema<long>
     {
         public long Id { get; set; }
 
-        public ICollection<ServiceAddressEntity> ServiceAddresses { get; set; }
-        public ICollection<InvoiceEntity> Invoices { get; set; }
+        public ICollection<ServiceAddressEntity> Addresses { get; set; }
+        public ICollection<OrderEntity> Orders { get; set; }
     }
 }

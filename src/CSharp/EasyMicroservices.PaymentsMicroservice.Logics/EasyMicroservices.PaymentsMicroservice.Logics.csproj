@@ -6,11 +6,7 @@
   </PropertyGroup>
   
   <ItemGroup>
-  </ItemGroup>
-  
-  <ItemGroup>
     <Folder Include="DatabaseLogics\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="Mappers\" />
   </ItemGroup>
   

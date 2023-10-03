@@ -4,11 +4,11 @@ using EasyMicroservices.PaymentsMicroservice.Database.Schemas;
 
 namespace EasyMicroservices.AuthenticationsMicroservice.Database.Entities
 {
-    public class InvoiceStatusHistoryEntity : InvoiceStatusHistorySchema, IIdSchema<long>
+    public class OrderStatusHistoryEntity : OrderStatusHistorySchema, IIdSchema<long>
     {
         public long Id { get; set; }
 
-        public long InvoiceId { get; set; }
-        public InvoiceEntity Invoice { get; set; }
+        public long OrderId { get; set; }
+        public OrderEntity Order { get; set; }
     }
 }

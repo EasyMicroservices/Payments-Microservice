@@ -4,12 +4,11 @@ using EasyMicroservices.PaymentsMicroservice.DataTypes;
 
 namespace EasyMicroservices.PaymentsMicroservice.Database.Schemas
 {
-    public class InvoiceSchema : FullAbilitySchema
+    public class OrderSchema : FullAbilitySchema
     {
         public bool HasCallbackCalledByUser { get; set; }
-        public InvoiceStatusType Status { get; set; }
+        public OrderStatusType Status { get; set; } = OrderStatusType.Created;
         public decimal TotalAmount { get; set; }
         public CurrencyCodeType CurrencyCode { get; set; }
-        public string Url { get; set; }
     }
 }
