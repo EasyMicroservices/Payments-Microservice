@@ -680,11 +680,10 @@
         "operationId": "OpenPortal",
         "parameters": [
           {
-            "name": "id",
+            "name": "portalKey",
             "in": "query",
             "schema": {
-              "type": "integer",
-              "format": "int64"
+              "type": "string"
             }
           }
         ],
