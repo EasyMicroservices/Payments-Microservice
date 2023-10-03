@@ -13,8 +13,7 @@ namespace EasyMicroservices.PaymentsMicroservice.Database.Entities
         public ServiceEntity Service { get; set; }
 
         public ICollection<ProductEntity> Products { get; set; }
-        public ICollection<OrderStatusHistoryEntity> OrderStatusHistories { get; set; }
-        public ICollection<OrderUrlEntity> OrderUrls { get; set; }
+        public ICollection<OrderStatusHistoryEntity> StatusHistories { get; set; }
+        public ICollection<OrderUrlEntity> Urls { get; set; }
     }
-    
 }

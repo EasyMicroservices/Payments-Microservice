@@ -1,14 +1,18 @@
-﻿using EasyMicroservices.PaymentsMicroservice.DataTypes;
+﻿using EasyMicroservices.Domain.DataTypes;
+using EasyMicroservices.PaymentsMicroservice.Contracts.Common;
+using EasyMicroservices.PaymentsMicroservice.DataTypes;
+using System.Collections.Generic;
 
 namespace EasyMicroservices.PaymentsMicroservice.Contracts.Requests
 {
     public class CreateOrderRequestContract
     {
+        public string Name { get; set; }
         public long ServiceId { get; set; }
         public string Address { get; set; }
-        public OrderStatusType Status { get; set; }
         public decimal TotalAmount { get; set; }
-        public string Url { get; set; }
+        public CurrencyCodeType CurrencyCode { get; set; }
+        public List<OrderUrlContract> Urls { get; set; }
         public string UniqueIdentity { get; set; }
     }
 }

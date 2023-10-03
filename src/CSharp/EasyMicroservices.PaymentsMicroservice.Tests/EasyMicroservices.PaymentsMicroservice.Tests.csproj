@@ -23,4 +23,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EasyMicroservices.PaymentsMicroservice.WebApi\EasyMicroservices.PaymentsMicroservice.WebApi.csproj" />
+  </ItemGroup>
+
 </Project>

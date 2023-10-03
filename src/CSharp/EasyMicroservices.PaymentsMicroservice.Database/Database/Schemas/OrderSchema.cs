@@ -7,7 +7,7 @@ namespace EasyMicroservices.PaymentsMicroservice.Database.Schemas
     public class OrderSchema : FullAbilitySchema
     {
         public bool HasCallbackCalledByUser { get; set; }
-        public OrderStatusType Status { get; set; }
+        public OrderStatusType Status { get; set; } = OrderStatusType.Created;
         public decimal TotalAmount { get; set; }
         public CurrencyCodeType CurrencyCode { get; set; }
     }
