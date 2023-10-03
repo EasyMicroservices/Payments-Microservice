@@ -24,6 +24,14 @@ namespace EasyMicroservices.PaymentsMicroservice.Database.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.AutoModelCreating(modelBuilder);
+            modelBuilder.Entity<OrderEntity>(model =>
+            {
+                model.HasIndex(x => x.ExternalServiceId).IsUnique();
+            });
+            modelBuilder.Entity<OrderUrlEntity>(model =>
+            {
+                model.HasIndex(x => x.Key).IsUnique();
+            });
         }
     }
 }

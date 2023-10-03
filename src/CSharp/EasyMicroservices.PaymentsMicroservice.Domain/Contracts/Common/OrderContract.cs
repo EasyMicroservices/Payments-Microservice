@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using EasyMicroservices.Cores.Interfaces;
-using EasyMicroservices.PaymentsMicroservice.DataTypes;
+﻿using EasyMicroservices.Cores.Interfaces;
+using EasyMicroservices.Payments.DataTypes;
+using System;
 
 namespace EasyMicroservices.PaymentsMicroservice.Contracts.Common
 {
@@ -13,7 +9,7 @@ namespace EasyMicroservices.PaymentsMicroservice.Contracts.Common
         public long Id { get; set; }
         public long ServiceId { get; set; }
         public string Address { get; set; }
-        public OrderStatusType Status { get; set; }
+        public PaymentStatusType Status { get; set; }
         public decimal TotalAmount { get; set; }
         public string Url { get; set; }
         public string UniqueIdentity { get; set; }

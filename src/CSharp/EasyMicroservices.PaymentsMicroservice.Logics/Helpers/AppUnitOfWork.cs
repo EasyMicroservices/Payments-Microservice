@@ -37,7 +37,8 @@ namespace EasyMicroservices.PaymentsMicroservice.Helpers
         {
             var service = await GetReadableOf<ServiceEntity>().Include(x => x.Addresses).FirstOrDefaultAsync(x => x.Id == serviceId);
             service.Validate();
-            return new StripeProvider(service.Addresses.First().ApiKey);
+            var address = service.Addresses.First();
+            return new StripeProvider(address.ApiKey, new StripeClient(address.ApiKey, apiBase: address.Address));
         }
     }
 }

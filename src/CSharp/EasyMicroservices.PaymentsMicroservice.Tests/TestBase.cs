@@ -1,36 +1,93 @@
-﻿using EasyMicroservices.PaymentsMicroservice.WebApi.Controllers;
+﻿using EasyMicroservices.Payments.DataTypes;
+using EasyMicroservices.Payments.VirtualServerForTests;
+using EasyMicroservices.Payments.VirtualServerForTests.TestResources;
+using EasyMicroservices.PaymentsMicroservice.Database.Entities;
+using EasyMicroservices.PaymentsMicroservice.Interfaces;
+using EasyMicroservices.PaymentsMicroservice.WebApi.Controllers;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Payments.GeneratedServices;
+using Stripe;
 
 namespace EasyMicroservices.PaymentsMicroservice.Tests
 {
     public class TestBase
     {
-        static TestBase()
-        {
-            StartServer().GetAwaiter().GetResult();
-        }
-
         static bool IsStarted = false;
+        static bool IsInitialized = false;
 
+        protected static PaymentsVirtualTestManager PaymentsVirtualTestManager { get; set; } = new PaymentsVirtualTestManager();
+        static IServiceProvider service = null;
         static async Task StartServer()
         {
             if (IsStarted)
                 return;
             IsStarted = true;
+            TaskCompletionSource taskCompletionSource = new TaskCompletionSource();
             _ = Task.Run(async () =>
             {
                 await WebApi.Program.Run(null, (s) =>
                 {
                     s.AddControllers().PartManager.ApplicationParts.Add(new AssemblyPart(typeof(OrderController).Assembly));
+                }, (p) =>
+                {
+                    service = p;
+                    taskCompletionSource.SetResult();
                 });
             });
-            await Task.Delay(2000);
+            await taskCompletionSource.Task;
+
+            if (await PaymentsVirtualTestManager.OnInitialize(PaymentComponentPort))
+            {
+                foreach (var item in StripeTestResource.GetResources("http://localhost/successpaymenthappens?orderid=0000",
+                    $"http://localhost:{Port}/api/StripeCallback/SuccessPortalCallback?sessionId=cs_test_a1qlnJteMKipT19Jawvbnngbdfcdsj832YeARo1DAJjdPgNWYeHaP"))
+                {
+                    PaymentsVirtualTestManager.AppendService(PaymentComponentPort, item.Key, item.Value);
+                }
+            }
+        }
+
+        public static async Task Initialize()
+        {
+            await StartServer();
+            if (IsInitialized)
+                return;
+            IsInitialized = true;
+            await CheckDatabase(service);
+        }
+
+        protected static int PaymentComponentPort = 1061;
+        static int Port = 1047;
+        static HttpClient HttpClient = new HttpClient();
+        public OrderPortalClient GetOrderPortalClient()
+        {
+            return new OrderPortalClient($"http://localhost:{Port}", HttpClient);
+        }
+
+        static async Task CheckDatabase(IServiceProvider service)
+        {
+            using var unit = service.GetService<IAppUnitOfWork>();
+            var queryable = unit.GetQueryableOf<ServiceEntity>();
+            var services = await queryable.ToListAsync();
+            if (services.Count == 0)
+            {
+                await queryable.AddAsync(new ServiceEntity()
+                {
+                    Name = "TestServer",
+                    ServiceType = PaymentServiceType.Stripe,
+                    Addresses = new List<ServiceAddressEntity>()
+                    {
+                        new ServiceAddressEntity()
+                        {
+                            //ApiKey = "your live session",
+                            //Address = StripeClient.DefaultApiBase
+                            ApiKey = "testapikey",
+                            Address = $"http://localhost:{PaymentComponentPort}"
+                        }
+                    }
+                });
+                await queryable.SaveChangesAsync();
+            }
         }
     }
 }
