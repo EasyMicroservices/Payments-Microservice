@@ -24,7 +24,7 @@ namespace EasyMicroservices.PaymentsMicroservice.Tests
                 return;
             IsStarted = true;
             TaskCompletionSource taskCompletionSource = new TaskCompletionSource();
-            _ = Task.Run(async () =>
+            Thread thread = new Thread(async () =>
             {
                 await WebApi.Program.Run(null, (s) =>
                 {
@@ -33,8 +33,9 @@ namespace EasyMicroservices.PaymentsMicroservice.Tests
                 {
                     service = p;
                     taskCompletionSource.SetResult();
-                });
+                }).ConfigureAwait(false);
             });
+            thread.Start();
             await taskCompletionSource.Task;
 
             if (await PaymentsVirtualTestManager.OnInitialize(PaymentComponentPort))
