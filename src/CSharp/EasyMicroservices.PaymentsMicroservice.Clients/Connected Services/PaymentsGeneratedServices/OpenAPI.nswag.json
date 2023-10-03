@@ -3182,6 +3182,84 @@
           }
         }
       }
+    },
+    "/api/StripeCallback/SuccessPortalCallback": {
+      "get": {
+        "tags": [
+          "StripeCallback"
+        ],
+        "operationId": "SuccessPortalCallback",
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/StripeCallback/CancelPortalCallback": {
+      "get": {
+        "tags": [
+          "StripeCallback"
+        ],
+        "operationId": "CancelPortalCallback",
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -3284,7 +3362,7 @@
             "format": "int64"
           },
           "status": {
-            "$ref": "#/components/schemas/OrderStatusType"
+            "$ref": "#/components/schemas/PaymentStatusType"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -4103,7 +4181,7 @@
             "nullable": true
           },
           "status": {
-            "$ref": "#/components/schemas/OrderStatusType"
+            "$ref": "#/components/schemas/PaymentStatusType"
           },
           "totalAmount": {
             "type": "number",
@@ -4198,7 +4276,7 @@
             "format": "int64"
           },
           "status": {
-            "$ref": "#/components/schemas/OrderStatusType"
+            "$ref": "#/components/schemas/PaymentStatusType"
           },
           "uniqueIdentity": {
             "type": "string",
@@ -4272,7 +4350,20 @@
           }
         }
       },
-      "OrderStatusType": {
+      "OrderUrlContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/RequestUrlType"
+          }
+        }
+      },
+      "PaymentStatusType": {
         "type": "integer",
         "format": "int32",
         "x-enumNames": [
@@ -4284,12 +4375,15 @@
           "Nothing",
           "Created",
           "RedirectedToBankPortal",
-          "Paied",
+          "Paid",
           "Canceled",
           "Failed",
           "Successful",
           "Closed",
-          "PaidBack"
+          "PaidBack",
+          "InProgress",
+          "Verified",
+          "UnPaid"
         ],
         "enum": [
           0,
@@ -4305,21 +4399,11 @@
           10,
           11,
           12,
-          13
+          13,
+          14,
+          15,
+          16
         ]
-      },
-      "OrderUrlContract": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "url": {
-            "type": "string",
-            "nullable": true
-          },
-          "type": {
-            "$ref": "#/components/schemas/RequestUrlType"
-          }
-        }
       },
       "ProductContract": {
         "type": "object",
@@ -4664,7 +4748,7 @@
             "nullable": true
           },
           "status": {
-            "$ref": "#/components/schemas/OrderStatusType"
+            "$ref": "#/components/schemas/PaymentStatusType"
           },
           "totalAmount": {
             "type": "number",
@@ -4708,7 +4792,7 @@
             "format": "int64"
           },
           "status": {
-            "$ref": "#/components/schemas/OrderStatusType"
+            "$ref": "#/components/schemas/PaymentStatusType"
           },
           "uniqueIdentity": {
             "type": "string",
