@@ -1,13 +1,14 @@
 ﻿using EasyMicroservices.Payments.DataTypes;
 using EasyMicroservices.Payments.VirtualServerForTests;
 using EasyMicroservices.Payments.VirtualServerForTests.TestResources;
+using EasyMicroservices.PaymentsMicroservice.Database.Contexts;
 using EasyMicroservices.PaymentsMicroservice.Database.Entities;
 using EasyMicroservices.PaymentsMicroservice.Interfaces;
 using EasyMicroservices.PaymentsMicroservice.WebApi.Controllers;
+using EasyMicroservices.WhiteLabelsMicroservice.VirtualServerForTests;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.Extensions.DependencyInjection;
 using Payments.GeneratedServices;
-using Stripe;
 
 namespace EasyMicroservices.PaymentsMicroservice.Tests
 {
@@ -17,12 +18,22 @@ namespace EasyMicroservices.PaymentsMicroservice.Tests
         static bool IsInitialized = false;
 
         protected static PaymentsVirtualTestManager PaymentsVirtualTestManager { get; set; } = new PaymentsVirtualTestManager();
+        protected static WhiteLabelVirtualTestManager WhiteLabelVirtualTestManager { get; set; } = new WhiteLabelVirtualTestManager();
+
         static IServiceProvider service = null;
         static async Task StartServer()
         {
             if (IsStarted)
                 return;
             IsStarted = true;
+            if (await WhiteLabelVirtualTestManager.OnInitialize(WhiteLabelPort))
+            {
+                foreach (var item in WhiteLabelResource.GetResources(new PaymentContext(new DatabaseBuilder(null)), "Payments"))
+                {
+                    WhiteLabelVirtualTestManager.AppendService(WhiteLabelPort, item.Key, item.Value);
+                }
+            }
+
             TaskCompletionSource taskCompletionSource = new TaskCompletionSource();
             Thread thread = new Thread(async () =>
             {
@@ -59,6 +70,7 @@ namespace EasyMicroservices.PaymentsMicroservice.Tests
 
         protected static int PaymentComponentPort = 1061;
         static int Port = 1047;
+        static int WhiteLabelPort = 1041;
         static HttpClient HttpClient = new HttpClient();
         public OrderPortalClient GetOrderPortalClient()
         {
