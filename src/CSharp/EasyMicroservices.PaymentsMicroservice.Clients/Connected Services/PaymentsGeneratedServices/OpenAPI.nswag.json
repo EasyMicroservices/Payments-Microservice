@@ -5,27 +5,76 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Invoice/Add": {
+    "/api/Order/CreateOrder": {
       "post": {
         "tags": [
-          "Invoice"
+          "Order"
+        ],
+        "operationId": "CreateOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOrderResponseContractMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOrderResponseContractMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOrderResponseContractMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Order/Add": {
+      "post": {
+        "tags": [
+          "Order"
         ],
         "operationId": "Add",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/InvoiceCreateRequestContract"
+                "$ref": "#/components/schemas/CreateOrderRequestContract"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/InvoiceCreateRequestContract"
+                "$ref": "#/components/schemas/CreateOrderRequestContract"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/InvoiceCreateRequestContract"
+                "$ref": "#/components/schemas/CreateOrderRequestContract"
               }
             }
           }
@@ -54,27 +103,76 @@
         }
       }
     },
-    "/api/Invoice/Update": {
+    "/api/Order/AddBulk": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "operationId": "AddBulk",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequestContractCreateBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequestContractCreateBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequestContractCreateBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Order/Update": {
       "put": {
         "tags": [
-          "Invoice"
+          "Order"
         ],
         "operationId": "Update",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/InvoiceUpdateRequestContract"
+                "$ref": "#/components/schemas/UpdateOrderRequestContract"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/InvoiceUpdateRequestContract"
+                "$ref": "#/components/schemas/UpdateOrderRequestContract"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/InvoiceUpdateRequestContract"
+                "$ref": "#/components/schemas/UpdateOrderRequestContract"
               }
             }
           }
@@ -85,17 +183,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractMessageContract"
+                  "$ref": "#/components/schemas/OrderContractMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractMessageContract"
+                  "$ref": "#/components/schemas/OrderContractMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractMessageContract"
+                  "$ref": "#/components/schemas/OrderContractMessageContract"
                 }
               }
             }
@@ -103,27 +201,27 @@
         }
       }
     },
-    "/api/Invoice/GetById": {
-      "post": {
+    "/api/Order/UpdateBulk": {
+      "put": {
         "tags": [
-          "Invoice"
+          "Order"
         ],
-        "operationId": "GetById",
+        "operationId": "UpdateBulk",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+                "$ref": "#/components/schemas/UpdateOrderRequestContractUpdateBulkRequestContract"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+                "$ref": "#/components/schemas/UpdateOrderRequestContractUpdateBulkRequestContract"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+                "$ref": "#/components/schemas/UpdateOrderRequestContractUpdateBulkRequestContract"
               }
             }
           }
@@ -134,17 +232,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractMessageContract"
+                  "$ref": "#/components/schemas/MessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractMessageContract"
+                  "$ref": "#/components/schemas/MessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractMessageContract"
+                  "$ref": "#/components/schemas/MessageContract"
                 }
               }
             }
@@ -152,59 +250,10 @@
         }
       }
     },
-    "/api/Invoice/GetByUniqueIdentity": {
-      "post": {
-        "tags": [
-          "Invoice"
-        ],
-        "operationId": "GetByUniqueIdentity",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractMessageContract"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractMessageContract"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractMessageContract"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Invoice/HardDeleteById": {
+    "/api/Order/HardDeleteById": {
       "delete": {
         "tags": [
-          "Invoice"
+          "Order"
         ],
         "operationId": "HardDeleteById",
         "requestBody": {
@@ -250,10 +299,59 @@
         }
       }
     },
-    "/api/Invoice/SoftDeleteById": {
+    "/api/Order/HardDeleteBulkByIds": {
       "delete": {
         "tags": [
-          "Invoice"
+          "Order"
+        ],
+        "operationId": "HardDeleteBulkByIds",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Order/SoftDeleteById": {
+      "delete": {
+        "tags": [
+          "Order"
         ],
         "operationId": "SoftDeleteById",
         "requestBody": {
@@ -299,10 +397,206 @@
         }
       }
     },
-    "/api/Invoice/GetAll": {
+    "/api/Order/SoftDeleteBulkByIds": {
+      "delete": {
+        "tags": [
+          "Order"
+        ],
+        "operationId": "SoftDeleteBulkByIds",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Order/GetById": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "operationId": "GetById",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderContractMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderContractMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderContractMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Order/GetByUniqueIdentity": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "operationId": "GetByUniqueIdentity",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderContractMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderContractMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderContractMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Order/Filter": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "operationId": "Filter",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderContractListMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderContractListMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderContractListMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Order/GetAll": {
       "get": {
         "tags": [
-          "Invoice"
+          "Order"
         ],
         "operationId": "GetAll",
         "responses": {
@@ -311,17 +605,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractListMessageContract"
+                  "$ref": "#/components/schemas/OrderContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractListMessageContract"
+                  "$ref": "#/components/schemas/OrderContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractListMessageContract"
+                  "$ref": "#/components/schemas/OrderContractListMessageContract"
                 }
               }
             }
@@ -329,10 +623,10 @@
         }
       }
     },
-    "/api/Invoice/GetAllByUniqueIdentity": {
+    "/api/Order/GetAllByUniqueIdentity": {
       "post": {
         "tags": [
-          "Invoice"
+          "Order"
         ],
         "operationId": "GetAllByUniqueIdentity",
         "requestBody": {
@@ -360,17 +654,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractListMessageContract"
+                  "$ref": "#/components/schemas/OrderContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractListMessageContract"
+                  "$ref": "#/components/schemas/OrderContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceContractListMessageContract"
+                  "$ref": "#/components/schemas/OrderContractListMessageContract"
                 }
               }
             }
@@ -378,27 +672,27 @@
         }
       }
     },
-    "/api/InvoiceStatusHistory/Add": {
+    "/api/OrderStatusHistory/Add": {
       "post": {
         "tags": [
-          "InvoiceStatusHistory"
+          "OrderStatusHistory"
         ],
         "operationId": "Add2",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/InvoiceStatusHistoryCreateRequestContract"
+                "$ref": "#/components/schemas/CreateOrderStatusHistoryRequestContract"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/InvoiceStatusHistoryCreateRequestContract"
+                "$ref": "#/components/schemas/CreateOrderStatusHistoryRequestContract"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/InvoiceStatusHistoryCreateRequestContract"
+                "$ref": "#/components/schemas/CreateOrderStatusHistoryRequestContract"
               }
             }
           }
@@ -427,27 +721,76 @@
         }
       }
     },
-    "/api/InvoiceStatusHistory/Update": {
+    "/api/OrderStatusHistory/AddBulk": {
+      "post": {
+        "tags": [
+          "OrderStatusHistory"
+        ],
+        "operationId": "AddBulk2",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderStatusHistoryRequestContractCreateBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderStatusHistoryRequestContractCreateBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderStatusHistoryRequestContractCreateBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/OrderStatusHistory/Update": {
       "put": {
         "tags": [
-          "InvoiceStatusHistory"
+          "OrderStatusHistory"
         ],
         "operationId": "Update2",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/InvoiceStatusHistoryUpdateRequestContract"
+                "$ref": "#/components/schemas/UpdateOrderStatusHistoryRequestContract"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/InvoiceStatusHistoryUpdateRequestContract"
+                "$ref": "#/components/schemas/UpdateOrderStatusHistoryRequestContract"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/InvoiceStatusHistoryUpdateRequestContract"
+                "$ref": "#/components/schemas/UpdateOrderStatusHistoryRequestContract"
               }
             }
           }
@@ -458,17 +801,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractMessageContract"
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractMessageContract"
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractMessageContract"
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractMessageContract"
                 }
               }
             }
@@ -476,27 +819,27 @@
         }
       }
     },
-    "/api/InvoiceStatusHistory/GetById": {
-      "post": {
+    "/api/OrderStatusHistory/UpdateBulk": {
+      "put": {
         "tags": [
-          "InvoiceStatusHistory"
+          "OrderStatusHistory"
         ],
-        "operationId": "GetById2",
+        "operationId": "UpdateBulk2",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+                "$ref": "#/components/schemas/UpdateOrderStatusHistoryRequestContractUpdateBulkRequestContract"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+                "$ref": "#/components/schemas/UpdateOrderStatusHistoryRequestContractUpdateBulkRequestContract"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+                "$ref": "#/components/schemas/UpdateOrderStatusHistoryRequestContractUpdateBulkRequestContract"
               }
             }
           }
@@ -507,17 +850,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractMessageContract"
+                  "$ref": "#/components/schemas/MessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractMessageContract"
+                  "$ref": "#/components/schemas/MessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractMessageContract"
+                  "$ref": "#/components/schemas/MessageContract"
                 }
               }
             }
@@ -525,59 +868,10 @@
         }
       }
     },
-    "/api/InvoiceStatusHistory/GetByUniqueIdentity": {
-      "post": {
-        "tags": [
-          "InvoiceStatusHistory"
-        ],
-        "operationId": "GetByUniqueIdentity2",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractMessageContract"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractMessageContract"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractMessageContract"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/InvoiceStatusHistory/HardDeleteById": {
+    "/api/OrderStatusHistory/HardDeleteById": {
       "delete": {
         "tags": [
-          "InvoiceStatusHistory"
+          "OrderStatusHistory"
         ],
         "operationId": "HardDeleteById2",
         "requestBody": {
@@ -623,10 +917,59 @@
         }
       }
     },
-    "/api/InvoiceStatusHistory/SoftDeleteById": {
+    "/api/OrderStatusHistory/HardDeleteBulkByIds": {
       "delete": {
         "tags": [
-          "InvoiceStatusHistory"
+          "OrderStatusHistory"
+        ],
+        "operationId": "HardDeleteBulkByIds2",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/OrderStatusHistory/SoftDeleteById": {
+      "delete": {
+        "tags": [
+          "OrderStatusHistory"
         ],
         "operationId": "SoftDeleteById2",
         "requestBody": {
@@ -672,10 +1015,206 @@
         }
       }
     },
-    "/api/InvoiceStatusHistory/GetAll": {
+    "/api/OrderStatusHistory/SoftDeleteBulkByIds": {
+      "delete": {
+        "tags": [
+          "OrderStatusHistory"
+        ],
+        "operationId": "SoftDeleteBulkByIds2",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/OrderStatusHistory/GetById": {
+      "post": {
+        "tags": [
+          "OrderStatusHistory"
+        ],
+        "operationId": "GetById2",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64GetIdRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/OrderStatusHistory/GetByUniqueIdentity": {
+      "post": {
+        "tags": [
+          "OrderStatusHistory"
+        ],
+        "operationId": "GetByUniqueIdentity2",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUniqueIdentityRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/OrderStatusHistory/Filter": {
+      "post": {
+        "tags": [
+          "OrderStatusHistory"
+        ],
+        "operationId": "Filter2",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilterRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractListMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractListMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractListMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/OrderStatusHistory/GetAll": {
       "get": {
         "tags": [
-          "InvoiceStatusHistory"
+          "OrderStatusHistory"
         ],
         "operationId": "GetAll2",
         "responses": {
@@ -684,17 +1223,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractListMessageContract"
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractListMessageContract"
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractListMessageContract"
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractListMessageContract"
                 }
               }
             }
@@ -702,10 +1241,10 @@
         }
       }
     },
-    "/api/InvoiceStatusHistory/GetAllByUniqueIdentity": {
+    "/api/OrderStatusHistory/GetAllByUniqueIdentity": {
       "post": {
         "tags": [
-          "InvoiceStatusHistory"
+          "OrderStatusHistory"
         ],
         "operationId": "GetAllByUniqueIdentity2",
         "requestBody": {
@@ -733,17 +1272,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractListMessageContract"
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractListMessageContract"
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InvoiceStatusHistoryContractListMessageContract"
+                  "$ref": "#/components/schemas/OrderStatusHistoryContractListMessageContract"
                 }
               }
             }
@@ -761,17 +1300,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ProudctCreateRequestContract"
+                "$ref": "#/components/schemas/CreateProudctRequestContract"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ProudctCreateRequestContract"
+                "$ref": "#/components/schemas/CreateProudctRequestContract"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ProudctCreateRequestContract"
+                "$ref": "#/components/schemas/CreateProudctRequestContract"
               }
             }
           }
@@ -800,6 +1339,55 @@
         }
       }
     },
+    "/api/Product/AddBulk": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "operationId": "AddBulk3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProudctRequestContractCreateBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProudctRequestContractCreateBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProudctRequestContractCreateBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Product/Update": {
       "put": {
         "tags": [
@@ -810,17 +1398,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ProudctUpdateRequestContract"
+                "$ref": "#/components/schemas/UpdateProudctRequestContract"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ProudctUpdateRequestContract"
+                "$ref": "#/components/schemas/UpdateProudctRequestContract"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ProudctUpdateRequestContract"
+                "$ref": "#/components/schemas/UpdateProudctRequestContract"
               }
             }
           }
@@ -842,6 +1430,251 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ProductContractMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/UpdateBulk": {
+      "put": {
+        "tags": [
+          "Product"
+        ],
+        "operationId": "UpdateBulk3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProudctRequestContractUpdateBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProudctRequestContractUpdateBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProudctRequestContractUpdateBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/HardDeleteById": {
+      "delete": {
+        "tags": [
+          "Product"
+        ],
+        "operationId": "HardDeleteById3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/HardDeleteBulkByIds": {
+      "delete": {
+        "tags": [
+          "Product"
+        ],
+        "operationId": "HardDeleteBulkByIds3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/SoftDeleteById": {
+      "delete": {
+        "tags": [
+          "Product"
+        ],
+        "operationId": "SoftDeleteById3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/SoftDeleteBulkByIds": {
+      "delete": {
+        "tags": [
+          "Product"
+        ],
+        "operationId": "SoftDeleteBulkByIds3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
                 }
               }
             }
@@ -947,27 +1780,27 @@
         }
       }
     },
-    "/api/Product/HardDeleteById": {
-      "delete": {
+    "/api/Product/Filter": {
+      "post": {
         "tags": [
           "Product"
         ],
-        "operationId": "HardDeleteById3",
+        "operationId": "Filter3",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+                "$ref": "#/components/schemas/FilterRequestContract"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+                "$ref": "#/components/schemas/FilterRequestContract"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+                "$ref": "#/components/schemas/FilterRequestContract"
               }
             }
           }
@@ -978,66 +1811,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
+                  "$ref": "#/components/schemas/ProductContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
+                  "$ref": "#/components/schemas/ProductContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Product/SoftDeleteById": {
-      "delete": {
-        "tags": [
-          "Product"
-        ],
-        "operationId": "SoftDeleteById3",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
+                  "$ref": "#/components/schemas/ProductContractListMessageContract"
                 }
               }
             }
@@ -1117,6 +1901,398 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ProductContractListMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Service/Add": {
+      "post": {
+        "tags": [
+          "Service"
+        ],
+        "operationId": "Add4",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateServiceRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateServiceRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateServiceRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int64MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int64MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int64MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Service/AddBulk": {
+      "post": {
+        "tags": [
+          "Service"
+        ],
+        "operationId": "AddBulk4",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateServiceRequestContractCreateBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateServiceRequestContractCreateBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateServiceRequestContractCreateBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Service/Update": {
+      "put": {
+        "tags": [
+          "Service"
+        ],
+        "operationId": "Update4",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateServiceRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateServiceRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateServiceRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceContractMessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceContractMessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceContractMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Service/UpdateBulk": {
+      "put": {
+        "tags": [
+          "Service"
+        ],
+        "operationId": "UpdateBulk4",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateServiceRequestContractUpdateBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateServiceRequestContractUpdateBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateServiceRequestContractUpdateBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Service/HardDeleteById": {
+      "delete": {
+        "tags": [
+          "Service"
+        ],
+        "operationId": "HardDeleteById4",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Service/HardDeleteBulkByIds": {
+      "delete": {
+        "tags": [
+          "Service"
+        ],
+        "operationId": "HardDeleteBulkByIds4",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Service/SoftDeleteById": {
+      "delete": {
+        "tags": [
+          "Service"
+        ],
+        "operationId": "SoftDeleteById4",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Service/SoftDeleteBulkByIds": {
+      "delete": {
+        "tags": [
+          "Service"
+        ],
+        "operationId": "SoftDeleteBulkByIds4",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
                 }
               }
             }
@@ -1222,27 +2398,27 @@
         }
       }
     },
-    "/api/Service/Add": {
+    "/api/Service/Filter": {
       "post": {
         "tags": [
           "Service"
         ],
-        "operationId": "Add4",
+        "operationId": "Filter4",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceCreateRequestContract"
+                "$ref": "#/components/schemas/FilterRequestContract"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceCreateRequestContract"
+                "$ref": "#/components/schemas/FilterRequestContract"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceCreateRequestContract"
+                "$ref": "#/components/schemas/FilterRequestContract"
               }
             }
           }
@@ -1253,164 +2429,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Int64MessageContract"
+                  "$ref": "#/components/schemas/ServiceContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Int64MessageContract"
+                  "$ref": "#/components/schemas/ServiceContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Int64MessageContract"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Service/Update": {
-      "put": {
-        "tags": [
-          "Service"
-        ],
-        "operationId": "Update4",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ServiceUpdateRequestContract"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ServiceUpdateRequestContract"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ServiceUpdateRequestContract"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServiceContractMessageContract"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServiceContractMessageContract"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServiceContractMessageContract"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Service/HardDeleteById": {
-      "delete": {
-        "tags": [
-          "Service"
-        ],
-        "operationId": "HardDeleteById4",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Int64DeleteRequestContract"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Int64DeleteRequestContract"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Int64DeleteRequestContract"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Service/SoftDeleteById": {
-      "delete": {
-        "tags": [
-          "Service"
-        ],
-        "operationId": "SoftDeleteById4",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
+                  "$ref": "#/components/schemas/ServiceContractListMessageContract"
                 }
               }
             }
@@ -1507,17 +2536,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceAddressCreateRequestContract"
+                "$ref": "#/components/schemas/CreateServiceAddressRequestContract"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceAddressCreateRequestContract"
+                "$ref": "#/components/schemas/CreateServiceAddressRequestContract"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceAddressCreateRequestContract"
+                "$ref": "#/components/schemas/CreateServiceAddressRequestContract"
               }
             }
           }
@@ -1546,6 +2575,55 @@
         }
       }
     },
+    "/api/ServiceAddress/AddBulk": {
+      "post": {
+        "tags": [
+          "ServiceAddress"
+        ],
+        "operationId": "AddBulk5",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateServiceAddressRequestContractCreateBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateServiceAddressRequestContractCreateBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateServiceAddressRequestContractCreateBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/ServiceAddress/Update": {
       "put": {
         "tags": [
@@ -1556,17 +2634,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceAddressUpdateRequestContract"
+                "$ref": "#/components/schemas/UpdateServiceAddressRequestContract"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceAddressUpdateRequestContract"
+                "$ref": "#/components/schemas/UpdateServiceAddressRequestContract"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceAddressUpdateRequestContract"
+                "$ref": "#/components/schemas/UpdateServiceAddressRequestContract"
               }
             }
           }
@@ -1588,6 +2666,251 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ServiceAddressContractMessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ServiceAddress/UpdateBulk": {
+      "put": {
+        "tags": [
+          "ServiceAddress"
+        ],
+        "operationId": "UpdateBulk5",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateServiceAddressRequestContractUpdateBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateServiceAddressRequestContractUpdateBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateServiceAddressRequestContractUpdateBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ServiceAddress/HardDeleteById": {
+      "delete": {
+        "tags": [
+          "ServiceAddress"
+        ],
+        "operationId": "HardDeleteById5",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ServiceAddress/HardDeleteBulkByIds": {
+      "delete": {
+        "tags": [
+          "ServiceAddress"
+        ],
+        "operationId": "HardDeleteBulkByIds5",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64DeleteBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ServiceAddress/SoftDeleteById": {
+      "delete": {
+        "tags": [
+          "ServiceAddress"
+        ],
+        "operationId": "SoftDeleteById5",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ServiceAddress/SoftDeleteBulkByIds": {
+      "delete": {
+        "tags": [
+          "ServiceAddress"
+        ],
+        "operationId": "SoftDeleteBulkByIds5",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Int64SoftDeleteBulkRequestContract"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageContract"
                 }
               }
             }
@@ -1693,27 +3016,27 @@
         }
       }
     },
-    "/api/ServiceAddress/HardDeleteById": {
-      "delete": {
+    "/api/ServiceAddress/Filter": {
+      "post": {
         "tags": [
           "ServiceAddress"
         ],
-        "operationId": "HardDeleteById5",
+        "operationId": "Filter5",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+                "$ref": "#/components/schemas/FilterRequestContract"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+                "$ref": "#/components/schemas/FilterRequestContract"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Int64DeleteRequestContract"
+                "$ref": "#/components/schemas/FilterRequestContract"
               }
             }
           }
@@ -1724,66 +3047,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
+                  "$ref": "#/components/schemas/ServiceAddressContractListMessageContract"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
+                  "$ref": "#/components/schemas/ServiceAddressContractListMessageContract"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/ServiceAddress/SoftDeleteById": {
-      "delete": {
-        "tags": [
-          "ServiceAddress"
-        ],
-        "operationId": "SoftDeleteById5",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Int64SoftDeleteRequestContract"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MessageContract"
+                  "$ref": "#/components/schemas/ServiceAddressContractListMessageContract"
                 }
               }
             }
@@ -1873,6 +3147,600 @@
   },
   "components": {
     "schemas": {
+      "CreateOrderRequestContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "currencyCode": {
+            "$ref": "#/components/schemas/CurrencyCodeType"
+          },
+          "urls": {
+            "title": "List<OrderUrlContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderUrlContract"
+            }
+          },
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CreateOrderRequestContractCreateBulkRequestContract": {
+        "title": "CreateBulkRequestContract<CreateOrderRequestContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "title": "List<CreateOrderRequestContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CreateOrderRequestContract"
+            }
+          }
+        }
+      },
+      "CreateOrderResponseContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "portalUrls": {
+            "title": "List<String>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "CreateOrderResponseContractMessageContract": {
+        "title": "MessageContract<CreateOrderResponseContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorContract"
+          },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
+          "result": {
+            "$ref": "#/components/schemas/CreateOrderResponseContract"
+          }
+        }
+      },
+      "CreateOrderStatusHistoryRequestContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "orderId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "status": {
+            "$ref": "#/components/schemas/OrderStatusType"
+          },
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CreateOrderStatusHistoryRequestContractCreateBulkRequestContract": {
+        "title": "CreateBulkRequestContract<CreateOrderStatusHistoryRequestContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "title": "List<CreateOrderStatusHistoryRequestContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CreateOrderStatusHistoryRequestContract"
+            }
+          }
+        }
+      },
+      "CreateProudctRequestContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "orderId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CreateProudctRequestContractCreateBulkRequestContract": {
+        "title": "CreateBulkRequestContract<CreateProudctRequestContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "title": "List<CreateProudctRequestContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CreateProudctRequestContract"
+            }
+          }
+        }
+      },
+      "CreateServiceAddressRequestContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "serviceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CreateServiceAddressRequestContractCreateBulkRequestContract": {
+        "title": "CreateBulkRequestContract<CreateServiceAddressRequestContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "title": "List<CreateServiceAddressRequestContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CreateServiceAddressRequestContract"
+            }
+          }
+        }
+      },
+      "CreateServiceRequestContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CreateServiceRequestContractCreateBulkRequestContract": {
+        "title": "CreateBulkRequestContract<CreateServiceRequestContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "title": "List<CreateServiceRequestContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CreateServiceRequestContract"
+            }
+          }
+        }
+      },
+      "CurrencyCodeType": {
+        "type": "integer",
+        "format": "int32",
+        "x-enumNames": [
+          "ALL",
+          "DZD",
+          "ARS",
+          "AUD",
+          "BSD",
+          "BHD",
+          "BDT",
+          "AMD",
+          "BBD",
+          "BMD",
+          "BTN",
+          "BOB",
+          "BWP",
+          "BZD",
+          "SBD",
+          "BND",
+          "MMK",
+          "BIF",
+          "KHR",
+          "CAD",
+          "CVE",
+          "KYD",
+          "LKR",
+          "CLP",
+          "CNY",
+          "COP",
+          "KMF",
+          "CRC",
+          "HRK",
+          "CUP",
+          "CZK",
+          "DKK",
+          "DOP",
+          "SVC",
+          "ETB",
+          "ERN",
+          "FKP",
+          "FJD",
+          "DJF",
+          "GMD",
+          "GIP",
+          "GTQ",
+          "GNF",
+          "GYD",
+          "HTG",
+          "HNL",
+          "HKD",
+          "HUF",
+          "ISK",
+          "INR",
+          "IDR",
+          "IRR",
+          "IQD",
+          "ILS",
+          "JMD",
+          "JPY",
+          "KZT",
+          "JOD",
+          "KES",
+          "KPW",
+          "KRW",
+          "KWD",
+          "KGS",
+          "LAK",
+          "LBP",
+          "LSL",
+          "LRD",
+          "LYD",
+          "MOP",
+          "MWK",
+          "MYR",
+          "MVR",
+          "MUR",
+          "MXN",
+          "MNT",
+          "MDL",
+          "MAD",
+          "OMR",
+          "NAD",
+          "NPR",
+          "ANG",
+          "AWG",
+          "VUV",
+          "NZD",
+          "NIO",
+          "NGN",
+          "NOK",
+          "PKR",
+          "PAB",
+          "PGK",
+          "PYG",
+          "PEN",
+          "PHP",
+          "QAR",
+          "RUB",
+          "RWF",
+          "SHP",
+          "SAR",
+          "SCR",
+          "SLL",
+          "SGD",
+          "VND",
+          "SOS",
+          "ZAR",
+          "SSP",
+          "SZL",
+          "SEK",
+          "CHF",
+          "SYP",
+          "THB",
+          "TOP",
+          "TTD",
+          "AED",
+          "TND",
+          "UGX",
+          "MKD",
+          "EGP",
+          "GBP",
+          "TZS",
+          "USD",
+          "UYU",
+          "UZS",
+          "WST",
+          "YER",
+          "TWD",
+          "SLE",
+          "VED",
+          "UYW",
+          "VES",
+          "MRU",
+          "STN",
+          "CUC",
+          "ZWL",
+          "BYN",
+          "TMT",
+          "GHS",
+          "SDG",
+          "UYI",
+          "RSD",
+          "MZN",
+          "AZN",
+          "RON",
+          "CHE",
+          "CHW",
+          "TRY",
+          "XAF",
+          "XCD",
+          "XOF",
+          "XPF",
+          "XBA",
+          "XBB",
+          "XBC",
+          "XBD",
+          "XAU",
+          "XDR",
+          "XAG",
+          "XPT",
+          "XTS",
+          "XPD",
+          "XUA",
+          "ZMW",
+          "SRD",
+          "MGA",
+          "COU",
+          "AFN",
+          "TJS",
+          "AOA",
+          "BGN",
+          "CDF",
+          "BAM",
+          "EUR",
+          "MXV",
+          "UAH",
+          "GEL",
+          "BOV",
+          "PLN",
+          "BRL",
+          "CLF",
+          "XSU",
+          "USN",
+          "XXX"
+        ],
+        "enum": [
+          8,
+          12,
+          32,
+          36,
+          44,
+          48,
+          50,
+          51,
+          52,
+          60,
+          64,
+          68,
+          72,
+          84,
+          90,
+          96,
+          104,
+          108,
+          116,
+          124,
+          132,
+          136,
+          144,
+          152,
+          156,
+          170,
+          174,
+          188,
+          191,
+          192,
+          203,
+          208,
+          214,
+          222,
+          230,
+          232,
+          238,
+          242,
+          262,
+          270,
+          292,
+          320,
+          324,
+          328,
+          332,
+          340,
+          344,
+          348,
+          352,
+          356,
+          360,
+          364,
+          368,
+          376,
+          388,
+          392,
+          398,
+          400,
+          404,
+          408,
+          410,
+          414,
+          417,
+          418,
+          422,
+          426,
+          430,
+          434,
+          446,
+          454,
+          458,
+          462,
+          480,
+          484,
+          496,
+          498,
+          504,
+          512,
+          516,
+          524,
+          532,
+          533,
+          548,
+          554,
+          558,
+          566,
+          578,
+          586,
+          590,
+          598,
+          600,
+          604,
+          608,
+          634,
+          643,
+          646,
+          654,
+          682,
+          690,
+          694,
+          702,
+          704,
+          706,
+          710,
+          728,
+          748,
+          752,
+          756,
+          760,
+          764,
+          776,
+          780,
+          784,
+          788,
+          800,
+          807,
+          818,
+          826,
+          834,
+          840,
+          858,
+          860,
+          882,
+          886,
+          901,
+          925,
+          926,
+          927,
+          928,
+          929,
+          930,
+          931,
+          932,
+          933,
+          934,
+          936,
+          938,
+          940,
+          941,
+          943,
+          944,
+          946,
+          947,
+          948,
+          949,
+          950,
+          951,
+          952,
+          953,
+          955,
+          956,
+          957,
+          958,
+          959,
+          960,
+          961,
+          962,
+          963,
+          964,
+          965,
+          967,
+          968,
+          969,
+          970,
+          971,
+          972,
+          973,
+          975,
+          976,
+          977,
+          978,
+          979,
+          980,
+          981,
+          984,
+          985,
+          986,
+          990,
+          994,
+          997,
+          999
+        ]
+      },
       "ErrorContract": {
         "type": "object",
         "additionalProperties": false,
@@ -1901,8 +3769,23 @@
             "nullable": true
           },
           "stackTrace": {
-            "type": "string",
-            "nullable": true
+            "title": "List<String>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "children": {
+            "title": "List<ErrorContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ErrorContract"
+            }
+          },
+          "serviceDetails": {
+            "$ref": "#/components/schemas/ServiceDetailsContract"
           }
         }
       },
@@ -1919,7 +3802,7 @@
           "SessionAccessDenied",
           "AccessDenied",
           "InternalError",
-          "Dupplicate",
+          "Duplicate",
           "Empty",
           "NotFound",
           "ValidationsError",
@@ -1948,6 +3831,79 @@
           16
         ]
       },
+      "FilterRequestContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isDeleted": {
+            "title": "Nullable<Boolean>",
+            "type": "boolean",
+            "nullable": true
+          },
+          "fromDeletedDateTime": {
+            "title": "Nullable<DateTime>",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "toDeletedDateTime": {
+            "title": "Nullable<DateTime>",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fromCreationDateTime": {
+            "title": "Nullable<DateTime>",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "toCreationDateTime": {
+            "title": "Nullable<DateTime>",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fromModificationDateTime": {
+            "title": "Nullable<DateTime>",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "toModificationDateTime": {
+            "title": "Nullable<DateTime>",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          },
+          "uniqueIdentityType": {
+            "$ref": "#/components/schemas/GetUniqueIdentityType"
+          },
+          "index": {
+            "title": "Nullable<Int64>",
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "length": {
+            "title": "Nullable<Int64>",
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "sortColumnName": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDescending": {
+            "type": "boolean"
+          }
+        }
+      },
       "GetUniqueIdentityRequestContract": {
         "type": "object",
         "additionalProperties": false,
@@ -1955,6 +3911,49 @@
           "uniqueIdentity": {
             "type": "string",
             "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/GetUniqueIdentityType"
+          }
+        }
+      },
+      "GetUniqueIdentityType": {
+        "type": "integer",
+        "format": "int32",
+        "x-enumNames": [
+          "None",
+          "Default",
+          "All",
+          "Other",
+          "Unknown",
+          "Nothing",
+          "OnlyParent",
+          "OnlyChilren"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "Int64DeleteBulkRequestContract": {
+        "title": "DeleteBulkRequestContract<Int64>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ids": {
+            "title": "List<Int64>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
           }
         }
       },
@@ -1991,9 +3990,31 @@
           "error": {
             "$ref": "#/components/schemas/ErrorContract"
           },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
           "result": {
             "type": "integer",
             "format": "int64"
+          }
+        }
+      },
+      "Int64SoftDeleteBulkRequestContract": {
+        "title": "SoftDeleteBulkRequestContract<Int64>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ids": {
+            "title": "List<Int64>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          "isDelete": {
+            "type": "boolean"
           }
         }
       },
@@ -2011,272 +4032,6 @@
           }
         }
       },
-      "InvoiceContract": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "serviceId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "address": {
-            "type": "string",
-            "nullable": true
-          },
-          "status": {
-            "$ref": "#/components/schemas/StatusType"
-          },
-          "totalAmount": {
-            "type": "number",
-            "format": "double"
-          },
-          "url": {
-            "type": "string",
-            "nullable": true
-          },
-          "uniqueIdentity": {
-            "type": "string",
-            "nullable": true
-          },
-          "creationDateTime": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "modificationDateTime": {
-            "title": "Nullable<DateTime>",
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "isDeleted": {
-            "type": "boolean"
-          },
-          "deletedDateTime": {
-            "title": "Nullable<DateTime>",
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          }
-        }
-      },
-      "InvoiceContractListMessageContract": {
-        "title": "MessageContract<List`1>",
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "isSuccess": {
-            "type": "boolean"
-          },
-          "error": {
-            "$ref": "#/components/schemas/ErrorContract"
-          },
-          "result": {
-            "title": "List<InvoiceContract>",
-            "type": "array",
-            "nullable": true,
-            "items": {
-              "$ref": "#/components/schemas/InvoiceContract"
-            }
-          }
-        }
-      },
-      "InvoiceContractMessageContract": {
-        "title": "MessageContract<InvoiceContract>",
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "isSuccess": {
-            "type": "boolean"
-          },
-          "error": {
-            "$ref": "#/components/schemas/ErrorContract"
-          },
-          "result": {
-            "$ref": "#/components/schemas/InvoiceContract"
-          }
-        }
-      },
-      "InvoiceCreateRequestContract": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "serviceId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "address": {
-            "type": "string",
-            "nullable": true
-          },
-          "status": {
-            "$ref": "#/components/schemas/StatusType"
-          },
-          "totalAmount": {
-            "type": "number",
-            "format": "double"
-          },
-          "url": {
-            "type": "string",
-            "nullable": true
-          },
-          "uniqueIdentity": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      },
-      "InvoiceStatusHistoryContract": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "invoiceId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "id": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "status": {
-            "$ref": "#/components/schemas/StatusType"
-          },
-          "uniqueIdentity": {
-            "type": "string",
-            "nullable": true
-          },
-          "creationDateTime": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "modificationDateTime": {
-            "title": "Nullable<DateTime>",
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "isDeleted": {
-            "type": "boolean"
-          },
-          "deletedDateTime": {
-            "title": "Nullable<DateTime>",
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          }
-        }
-      },
-      "InvoiceStatusHistoryContractListMessageContract": {
-        "title": "MessageContract<List`1>",
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "isSuccess": {
-            "type": "boolean"
-          },
-          "error": {
-            "$ref": "#/components/schemas/ErrorContract"
-          },
-          "result": {
-            "title": "List<InvoiceStatusHistoryContract>",
-            "type": "array",
-            "nullable": true,
-            "items": {
-              "$ref": "#/components/schemas/InvoiceStatusHistoryContract"
-            }
-          }
-        }
-      },
-      "InvoiceStatusHistoryContractMessageContract": {
-        "title": "MessageContract<InvoiceStatusHistoryContract>",
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "isSuccess": {
-            "type": "boolean"
-          },
-          "error": {
-            "$ref": "#/components/schemas/ErrorContract"
-          },
-          "result": {
-            "$ref": "#/components/schemas/InvoiceStatusHistoryContract"
-          }
-        }
-      },
-      "InvoiceStatusHistoryCreateRequestContract": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "invoiceId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "status": {
-            "$ref": "#/components/schemas/StatusType"
-          },
-          "uniqueIdentity": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      },
-      "InvoiceStatusHistoryUpdateRequestContract": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "invoiceId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "status": {
-            "$ref": "#/components/schemas/StatusType"
-          },
-          "uniqueIdentity": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      },
-      "InvoiceUpdateRequestContract": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "serviceId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "address": {
-            "type": "string",
-            "nullable": true
-          },
-          "status": {
-            "$ref": "#/components/schemas/StatusType"
-          },
-          "totalAmount": {
-            "type": "number",
-            "format": "double"
-          },
-          "url": {
-            "type": "string",
-            "nullable": true
-          },
-          "uniqueIdentity": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      },
       "MessageContract": {
         "type": "object",
         "additionalProperties": false,
@@ -2286,6 +4041,244 @@
           },
           "error": {
             "$ref": "#/components/schemas/ErrorContract"
+          },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          }
+        }
+      },
+      "OrderContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/OrderStatusType"
+          },
+          "totalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          },
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          },
+          "creationDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "modificationDateTime": {
+            "title": "Nullable<DateTime>",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "deletedDateTime": {
+            "title": "Nullable<DateTime>",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "OrderContractListMessageContract": {
+        "title": "ListMessageContract<OrderContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorContract"
+          },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
+          "result": {
+            "title": "List<OrderContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderContract"
+            }
+          },
+          "hasItems": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        }
+      },
+      "OrderContractMessageContract": {
+        "title": "MessageContract<OrderContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorContract"
+          },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
+          "result": {
+            "$ref": "#/components/schemas/OrderContract"
+          }
+        }
+      },
+      "OrderStatusHistoryContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "orderId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "status": {
+            "$ref": "#/components/schemas/OrderStatusType"
+          },
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          },
+          "creationDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "modificationDateTime": {
+            "title": "Nullable<DateTime>",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "deletedDateTime": {
+            "title": "Nullable<DateTime>",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "OrderStatusHistoryContractListMessageContract": {
+        "title": "ListMessageContract<OrderStatusHistoryContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorContract"
+          },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
+          "result": {
+            "title": "List<OrderStatusHistoryContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderStatusHistoryContract"
+            }
+          },
+          "hasItems": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        }
+      },
+      "OrderStatusHistoryContractMessageContract": {
+        "title": "MessageContract<OrderStatusHistoryContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorContract"
+          },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
+          "result": {
+            "$ref": "#/components/schemas/OrderStatusHistoryContract"
+          }
+        }
+      },
+      "OrderStatusType": {
+        "type": "integer",
+        "format": "int32",
+        "x-enumNames": [
+          "None",
+          "Default",
+          "All",
+          "Other",
+          "Unknown",
+          "Nothing",
+          "Created",
+          "RedirectedToBankPortal",
+          "Paied",
+          "Canceled",
+          "Failed",
+          "Successful",
+          "Closed",
+          "PaidBack"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      "OrderUrlContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/RequestUrlType"
           }
         }
       },
@@ -2297,7 +4290,7 @@
             "type": "integer",
             "format": "int64"
           },
-          "invoiceId": {
+          "orderId": {
             "type": "integer",
             "format": "int64"
           },
@@ -2305,7 +4298,7 @@
             "type": "string",
             "nullable": true
           },
-          "amount": {
+          "totalAmount": {
             "type": "number",
             "format": "double"
           },
@@ -2335,7 +4328,7 @@
         }
       },
       "ProductContractListMessageContract": {
-        "title": "MessageContract<List`1>",
+        "title": "ListMessageContract<ProductContract>",
         "type": "object",
         "additionalProperties": false,
         "properties": {
@@ -2345,6 +4338,9 @@
           "error": {
             "$ref": "#/components/schemas/ErrorContract"
           },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
           "result": {
             "title": "List<ProductContract>",
             "type": "array",
@@ -2352,6 +4348,10 @@
             "items": {
               "$ref": "#/components/schemas/ProductContract"
             }
+          },
+          "hasItems": {
+            "type": "boolean",
+            "readOnly": true
           }
         }
       },
@@ -2366,58 +4366,39 @@
           "error": {
             "$ref": "#/components/schemas/ErrorContract"
           },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
           "result": {
             "$ref": "#/components/schemas/ProductContract"
           }
         }
       },
-      "ProudctCreateRequestContract": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "invoiceId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "uniqueIdentity": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      },
-      "ProudctUpdateRequestContract": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "invoiceId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "uniqueIdentity": {
-            "type": "string",
-            "nullable": true
-          }
-        }
+      "RequestUrlType": {
+        "type": "integer",
+        "format": "int32",
+        "x-enumNames": [
+          "None",
+          "Default",
+          "All",
+          "Other",
+          "Unknown",
+          "Nothing",
+          "SuccessUrl",
+          "CancelUrl",
+          "RedirectUrl"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
       },
       "ServiceAddressContract": {
         "type": "object",
@@ -2461,7 +4442,7 @@
         }
       },
       "ServiceAddressContractListMessageContract": {
-        "title": "MessageContract<List`1>",
+        "title": "ListMessageContract<ServiceAddressContract>",
         "type": "object",
         "additionalProperties": false,
         "properties": {
@@ -2471,6 +4452,9 @@
           "error": {
             "$ref": "#/components/schemas/ErrorContract"
           },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
           "result": {
             "title": "List<ServiceAddressContract>",
             "type": "array",
@@ -2478,6 +4462,10 @@
             "items": {
               "$ref": "#/components/schemas/ServiceAddressContract"
             }
+          },
+          "hasItems": {
+            "type": "boolean",
+            "readOnly": true
           }
         }
       },
@@ -2492,48 +4480,11 @@
           "error": {
             "$ref": "#/components/schemas/ErrorContract"
           },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
           "result": {
             "$ref": "#/components/schemas/ServiceAddressContract"
-          }
-        }
-      },
-      "ServiceAddressCreateRequestContract": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "serviceId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "address": {
-            "type": "string",
-            "nullable": true
-          },
-          "uniqueIdentity": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      },
-      "ServiceAddressUpdateRequestContract": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "serviceId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "address": {
-            "type": "string",
-            "nullable": true
-          },
-          "uniqueIdentity": {
-            "type": "string",
-            "nullable": true
           }
         }
       },
@@ -2579,7 +4530,7 @@
         }
       },
       "ServiceContractListMessageContract": {
-        "title": "MessageContract<List`1>",
+        "title": "ListMessageContract<ServiceContract>",
         "type": "object",
         "additionalProperties": false,
         "properties": {
@@ -2589,6 +4540,9 @@
           "error": {
             "$ref": "#/components/schemas/ErrorContract"
           },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
           "result": {
             "title": "List<ServiceContract>",
             "type": "array",
@@ -2596,6 +4550,10 @@
             "items": {
               "$ref": "#/components/schemas/ServiceContract"
             }
+          },
+          "hasItems": {
+            "type": "boolean",
+            "readOnly": true
           }
         }
       },
@@ -2610,20 +4568,70 @@
           "error": {
             "$ref": "#/components/schemas/ErrorContract"
           },
+          "success": {
+            "$ref": "#/components/schemas/SuccessContract"
+          },
           "result": {
             "$ref": "#/components/schemas/ServiceContract"
           }
         }
       },
-      "ServiceCreateRequestContract": {
+      "ServiceDetailsContract": {
         "type": "object",
         "additionalProperties": false,
         "properties": {
-          "name": {
+          "servieRouteAddress": {
             "type": "string",
             "nullable": true
           },
-          "description": {
+          "methodName": {
+            "type": "string",
+            "nullable": true
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "porjectName": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "SuccessContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "endUserMessage": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "UpdateOrderRequestContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/OrderStatusType"
+          },
+          "totalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "url": {
             "type": "string",
             "nullable": true
           },
@@ -2633,7 +4641,136 @@
           }
         }
       },
-      "ServiceUpdateRequestContract": {
+      "UpdateOrderRequestContractUpdateBulkRequestContract": {
+        "title": "UpdateBulkRequestContract<UpdateOrderRequestContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "title": "List<UpdateOrderRequestContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/UpdateOrderRequestContract"
+            }
+          }
+        }
+      },
+      "UpdateOrderStatusHistoryRequestContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orderId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "status": {
+            "$ref": "#/components/schemas/OrderStatusType"
+          },
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "UpdateOrderStatusHistoryRequestContractUpdateBulkRequestContract": {
+        "title": "UpdateBulkRequestContract<UpdateOrderStatusHistoryRequestContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "title": "List<UpdateOrderStatusHistoryRequestContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/UpdateOrderStatusHistoryRequestContract"
+            }
+          }
+        }
+      },
+      "UpdateProudctRequestContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orderId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "UpdateProudctRequestContractUpdateBulkRequestContract": {
+        "title": "UpdateBulkRequestContract<UpdateProudctRequestContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "title": "List<UpdateProudctRequestContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/UpdateProudctRequestContract"
+            }
+          }
+        }
+      },
+      "UpdateServiceAddressRequestContract": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "uniqueIdentity": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "UpdateServiceAddressRequestContractUpdateBulkRequestContract": {
+        "title": "UpdateBulkRequestContract<UpdateServiceAddressRequestContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "title": "List<UpdateServiceAddressRequestContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/UpdateServiceAddressRequestContract"
+            }
+          }
+        }
+      },
+      "UpdateServiceRequestContract": {
         "type": "object",
         "additionalProperties": false,
         "properties": {
@@ -2655,41 +4792,20 @@
           }
         }
       },
-      "StatusType": {
-        "type": "integer",
-        "format": "int32",
-        "x-enumNames": [
-          "None",
-          "Default",
-          "All",
-          "Other",
-          "Unknown",
-          "Nothing",
-          "Created",
-          "RedirectedToBankPortal",
-          "Paied",
-          "Canceled",
-          "Failed",
-          "Successful",
-          "Closed",
-          "PaidBack"
-        ],
-        "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13
-        ]
+      "UpdateServiceRequestContractUpdateBulkRequestContract": {
+        "title": "UpdateBulkRequestContract<UpdateServiceRequestContract>",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "title": "List<UpdateServiceRequestContract>",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/UpdateServiceRequestContract"
+            }
+          }
+        }
       },
       "ValidationContract": {
         "type": "object",
