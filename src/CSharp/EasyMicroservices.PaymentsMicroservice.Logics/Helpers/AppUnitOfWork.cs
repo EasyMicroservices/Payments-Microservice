@@ -29,14 +29,17 @@ namespace EasyMicroservices.PaymentsMicroservice.Helpers
 
         public async Task<MessageContract<IPaymentProvider>> GetPayment()
         {
-            var serviceId = await GetReadableOf<ServiceEntity>().Select(x => x.Id).FirstOrDefaultAsync();
-            return await GetPayment(serviceId);
+            var service = await GetReadableOf<ServiceEntity>().FirstOrDefaultAsync();
+            return await GetPayment((service?.Id).GetValueOrDefault());
         }
 
         public async Task<MessageContract<IPaymentProvider>> GetPayment(long serviceId)
         {
             var service = await GetReadableOf<ServiceEntity>().Include(x => x.Addresses).FirstOrDefaultAsync(x => x.Id == serviceId);
-            service.Validate();
+            Console.WriteLine($"{serviceId} {service == null}");
+            var validate = service.Validate();
+            if (!validate)
+                return validate.ToContract<IPaymentProvider>();
             var address = service.Addresses.First();
             return new StripeProvider(address.ApiKey, new StripeClient(address.ApiKey, apiBase: address.Address));
         }
