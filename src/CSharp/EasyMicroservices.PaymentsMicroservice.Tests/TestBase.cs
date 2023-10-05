@@ -93,7 +93,7 @@ namespace EasyMicroservices.PaymentsMicroservice.Tests
                         new ServiceAddressEntity()
                         {
                             //ApiKey = "your live session",
-                            //Address = StripeClient.DefaultApiBase
+                            //Address = Stripe.StripeClient.DefaultApiBase
                             ApiKey = "testapikey",
                             Address = $"http://localhost:{PaymentComponentPort}"
                         }

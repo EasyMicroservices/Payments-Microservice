@@ -25,6 +25,7 @@ namespace EasyMicroservices.PaymentsMicroservice.WebApi.Controllers
         {
             var orderContractLogic = _unitOfWork.GetLongContractLogic<OrderEntity, CreateOrderRequestContract, UpdateOrderRequestContract, OrderContract>();
             var orderLogic = _unitOfWork.GetLogic<OrderEntity, long>();
+            request.ServiceId = 1;
             var addedOrderId = await orderContractLogic.Add(request, cancellationToken).AsCheckedResult();
             await OrderLogic.AddAndUpdateOrderStatus(addedOrderId, Payments.DataTypes.PaymentStatusType.Created, _unitOfWork);
             var paymentOrderResponse = await OrderLogic.CreateOrder(request, _unitOfWork);

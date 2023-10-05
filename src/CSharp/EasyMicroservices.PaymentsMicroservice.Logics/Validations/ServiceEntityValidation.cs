@@ -1,6 +1,7 @@
 ﻿using EasyMicroservices.PaymentsMicroservice.Database.Entities;
 using EasyMicroservices.ServiceContracts;
 using Microsoft.IdentityModel.Tokens;
+using System.Linq;
 using System.Text;
 
 namespace EasyMicroservices.PaymentsMicroservice.Validations
@@ -11,7 +12,7 @@ namespace EasyMicroservices.PaymentsMicroservice.Validations
         {
             if (service == null)
                 return (FailedReasonType.NotFound, "No service provider found in ServiceEntity, Please add your service provider!");
-            else if (service.Addresses.IsNullOrEmpty())
+            else if (service.Addresses.IsEmpty())
                 return (FailedReasonType.Empty, $"No address found for service provider Id: {service.Id}");
             return true;
         }
