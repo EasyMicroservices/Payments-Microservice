@@ -11,8 +11,7 @@ namespace EasyMicroservices.PaymentsMicroservice.WebApi
         public static async Task Main(string[] args)
         {
             var app = CreateBuilder(args);
-            var build = await app.Build<PaymentContext>();
-            build.UseGlobalExceptionHandler();
+            var build = await app.Build<PaymentContext>(true);
             build.MapControllers();
             await build.RunAsync();
         }
@@ -33,7 +32,6 @@ namespace EasyMicroservices.PaymentsMicroservice.WebApi
             var app = CreateBuilder(args);
             use?.Invoke(app.Services);
             var build = await app.Build<PaymentContext>();
-            build.UseGlobalExceptionHandler();
             build.MapControllers();
             serviceProvider(build.Services);
             await build.RunAsync();
