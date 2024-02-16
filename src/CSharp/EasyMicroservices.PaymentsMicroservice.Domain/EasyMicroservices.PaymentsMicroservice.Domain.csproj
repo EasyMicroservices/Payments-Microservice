@@ -12,8 +12,8 @@
 
   <ItemGroup>
     <PackageReference Include="EasyMicroservices.Payments.Stripe" Version="0.0.0.4" />
-    <PackageReference Include="EasyMicroservices.Cores.AspEntityFrameworkCoreApi" Version="0.0.0.45" />
-    <PackageReference Include="EasyMicroservices.Domain" Version="0.0.0.1" />
+    <PackageReference Include="EasyMicroservices.Cores.AspEntityFrameworkCoreApi" Version="0.0.1.55" />
+    <PackageReference Include="EasyMicroservices.Domain" Version="0.0.0.7" />
   </ItemGroup>
 
 </Project>

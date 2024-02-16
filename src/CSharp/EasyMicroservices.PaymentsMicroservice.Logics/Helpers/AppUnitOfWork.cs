@@ -22,11 +22,6 @@ namespace EasyMicroservices.PaymentsMicroservice.Helpers
 
         }
 
-        public IConfiguration GetConfiguration()
-        {
-            return _service.GetService<IConfiguration>();
-        }
-
         public async Task<MessageContract<IPaymentProvider>> GetPayment()
         {
             var service = await GetReadableOf<ServiceEntity>().FirstOrDefaultAsync();

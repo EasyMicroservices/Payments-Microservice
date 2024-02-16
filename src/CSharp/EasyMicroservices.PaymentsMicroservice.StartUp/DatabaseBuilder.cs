@@ -1,21 +1,23 @@
-﻿using EasyMicroservices.Cores.Relational.EntityFrameworkCore.Intrerfaces;
+﻿using EasyMicroservices.Cores.Database.Interfaces;
+using EasyMicroservices.Cores.Relational.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace EasyMicroservices.PaymentsMicroservice
 {
-    public class DatabaseBuilder : IEntityFrameworkCoreDatabaseBuilder
+    public class DatabaseBuilder : EntityFrameworkCoreDatabaseBuilder
     {
-        readonly IConfiguration _config;
-        public DatabaseBuilder(IConfiguration config)
+        public DatabaseBuilder(IConfiguration configuration, IDatabaseWidgetManager widgetManager) : base(configuration, widgetManager)
         {
-            _config = config;
         }
 
-        public void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseInMemoryDatabase("PaymentDatabase");
-            //optionsBuilder.UseSqlServer(_config.GetConnectionString("local"));
+            var entity = GetEntity();
+            if (entity.IsSqlServer())
+                optionsBuilder.UseSqlServer(entity.ConnectionString);
+            else if (entity.IsInMemory())
+                optionsBuilder.UseInMemoryDatabase("Payments");
         }
     }
 }

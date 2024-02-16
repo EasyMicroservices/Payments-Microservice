@@ -11,7 +11,7 @@ namespace EasyMicroservices.PaymentsMicroservice.Database.Entities
         public long OrderId { get; set; }
         public OrderEntity Order { get; set; }
 
-        public long? ProductId { get; set; }
+        public long? ParentId { get; set; }
         public ProductEntity Parent { get; set; }
 
         public ICollection<ProductEntity> Children { get; set; }
