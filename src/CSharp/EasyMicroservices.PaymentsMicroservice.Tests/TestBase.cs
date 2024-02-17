@@ -18,7 +18,7 @@ namespace EasyMicroservices.PaymentsMicroservice.Tests
         static bool IsInitialized = false;
 
         protected static PaymentsVirtualTestManager PaymentsVirtualTestManager { get; set; } = new PaymentsVirtualTestManager();
-        protected static WhiteLabelVirtualTestManager WhiteLabelVirtualTestManager { get; set; } = new WhiteLabelVirtualTestManager();
+        //protected static WhiteLabelVirtualTestManager WhiteLabelVirtualTestManager { get; set; } = new WhiteLabelVirtualTestManager();
 
         static IServiceProvider service = null;
         static async Task StartServer()
@@ -26,13 +26,13 @@ namespace EasyMicroservices.PaymentsMicroservice.Tests
             if (IsStarted)
                 return;
             IsStarted = true;
-            if (await WhiteLabelVirtualTestManager.OnInitialize(WhiteLabelPort))
-            {
-                foreach (var item in WhiteLabelResource.GetResources(new PaymentContext(new DatabaseBuilder(null)), "Payments"))
-                {
-                    WhiteLabelVirtualTestManager.AppendService(WhiteLabelPort, item.Key, item.Value);
-                }
-            }
+            //if (await WhiteLabelVirtualTestManager.OnInitialize(WhiteLabelPort))
+            //{
+            //    foreach (var item in WhiteLabelResource.GetResources(new PaymentContext(new DatabaseBuilder(null)), "Payments"))
+            //    {
+            //        WhiteLabelVirtualTestManager.AppendService(WhiteLabelPort, item.Key, item.Value);
+            //    }
+            //}
 
             TaskCompletionSource taskCompletionSource = new TaskCompletionSource();
             Thread thread = new Thread(async () =>
